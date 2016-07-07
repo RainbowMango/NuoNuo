@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0786B7CE8B6EB5284D0EE61C /* Pods_MyApp_NuoNuo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91826F5D95F36071FB51B5C3 /* Pods_MyApp_NuoNuo.framework */; };
 		9B6576B71D1FC09100F5F385 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6576B61D1FC09100F5F385 /* AppDelegate.swift */; };
 		9B6576B91D1FC09100F5F385 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6576B81D1FC09100F5F385 /* ViewController.swift */; };
 		9B6576BC1D1FC09100F5F385 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6576BA1D1FC09100F5F385 /* Main.storyboard */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		56DE5627269DCCC16C4F5321 /* Pods-MyApp-NuoNuo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp-NuoNuo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyApp-NuoNuo/Pods-MyApp-NuoNuo.debug.xcconfig"; sourceTree = "<group>"; };
+		91826F5D95F36071FB51B5C3 /* Pods_MyApp_NuoNuo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyApp_NuoNuo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6576B31D1FC09100F5F385 /* NuoNuo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NuoNuo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6576B61D1FC09100F5F385 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B6576B81D1FC09100F5F385 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		9B6576D51D1FC09100F5F385 /* NuoNuoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NuoNuoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6576D91D1FC09100F5F385 /* NuoNuoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuoNuoUITests.swift; sourceTree = "<group>"; };
 		9B6576DB1D1FC09100F5F385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E69BAF0909BF06F86ABD8850 /* Pods-MyApp-NuoNuo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp-NuoNuo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyApp-NuoNuo/Pods-MyApp-NuoNuo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0786B7CE8B6EB5284D0EE61C /* Pods_MyApp_NuoNuo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50CD4BF6A63E8BDB7C368022 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91826F5D95F36071FB51B5C3 /* Pods_MyApp_NuoNuo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7099AF075A5CBD69DC26CF6E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				56DE5627269DCCC16C4F5321 /* Pods-MyApp-NuoNuo.debug.xcconfig */,
+				E69BAF0909BF06F86ABD8850 /* Pods-MyApp-NuoNuo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9B6576AA1D1FC09100F5F385 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +107,8 @@
 				9B6576CD1D1FC09100F5F385 /* NuoNuoTests */,
 				9B6576D81D1FC09100F5F385 /* NuoNuoUITests */,
 				9B6576B41D1FC09100F5F385 /* Products */,
+				7099AF075A5CBD69DC26CF6E /* Pods */,
+				50CD4BF6A63E8BDB7C368022 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,9 +161,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9B6576DE1D1FC09100F5F385 /* Build configuration list for PBXNativeTarget "NuoNuo" */;
 			buildPhases = (
+				8BD4F25D9444601CCD5C1C8E /* Check Pods Manifest.lock */,
 				9B6576AF1D1FC09100F5F385 /* Sources */,
 				9B6576B01D1FC09100F5F385 /* Frameworks */,
 				9B6576B11D1FC09100F5F385 /* Resources */,
+				77106D6F9589DA107FCD1D26 /* Embed Pods Frameworks */,
+				0AFF5EEB25EF7F52DA4F9B71 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,6 +284,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0AFF5EEB25EF7F52DA4F9B71 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyApp-NuoNuo/Pods-MyApp-NuoNuo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77106D6F9589DA107FCD1D26 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyApp-NuoNuo/Pods-MyApp-NuoNuo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BD4F25D9444601CCD5C1C8E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9B6576AF1D1FC09100F5F385 /* Sources */ = {
@@ -407,6 +482,7 @@
 		};
 		9B6576DF1D1FC09100F5F385 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56DE5627269DCCC16C4F5321 /* Pods-MyApp-NuoNuo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NuoNuo/Info.plist;
@@ -419,6 +495,7 @@
 		};
 		9B6576E01D1FC09100F5F385 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E69BAF0909BF06F86ABD8850 /* Pods-MyApp-NuoNuo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NuoNuo/Info.plist;
@@ -494,6 +571,7 @@
 				9B6576E01D1FC09100F5F385 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B6576E11D1FC09100F5F385 /* Build configuration list for PBXNativeTarget "NuoNuoTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +580,7 @@
 				9B6576E31D1FC09100F5F385 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B6576E41D1FC09100F5F385 /* Build configuration list for PBXNativeTarget "NuoNuoUITests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +589,7 @@
 				9B6576E61D1FC09100F5F385 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
