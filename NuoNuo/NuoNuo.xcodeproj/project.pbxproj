@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0786B7CE8B6EB5284D0EE61C /* Pods_MyApp_NuoNuo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91826F5D95F36071FB51B5C3 /* Pods_MyApp_NuoNuo.framework */; };
+		9B04B97B1D2E882200C5D064 /* NetworkResourceDef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B97A1D2E882200C5D064 /* NetworkResourceDef.swift */; };
+		9B04B97C1D2E882200C5D064 /* NetworkResourceDef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B97A1D2E882200C5D064 /* NetworkResourceDef.swift */; };
+		9B04B97D1D2E882200C5D064 /* NetworkResourceDef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B97A1D2E882200C5D064 /* NetworkResourceDef.swift */; };
 		9B6576B71D1FC09100F5F385 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6576B61D1FC09100F5F385 /* AppDelegate.swift */; };
 		9B6576B91D1FC09100F5F385 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6576B81D1FC09100F5F385 /* ViewController.swift */; };
 		9B6576BC1D1FC09100F5F385 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6576BA1D1FC09100F5F385 /* Main.storyboard */; };
@@ -40,6 +43,10 @@
 /* Begin PBXFileReference section */
 		56DE5627269DCCC16C4F5321 /* Pods-MyApp-NuoNuo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp-NuoNuo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyApp-NuoNuo/Pods-MyApp-NuoNuo.debug.xcconfig"; sourceTree = "<group>"; };
 		91826F5D95F36071FB51B5C3 /* Pods_MyApp_NuoNuo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyApp_NuoNuo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B04B9761D2E869C00C5D064 /* NuoNuo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NuoNuo-Bridging-Header.h"; sourceTree = "<group>"; };
+		9B04B9771D2E869C00C5D064 /* NuoNuoTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NuoNuoTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		9B04B9781D2E869C00C5D064 /* NuoNuoUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NuoNuoUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		9B04B97A1D2E882200C5D064 /* NetworkResourceDef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResourceDef.swift; sourceTree = "<group>"; };
 		9B6576B31D1FC09100F5F385 /* NuoNuo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NuoNuo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6576B61D1FC09100F5F385 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B6576B81D1FC09100F5F385 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +116,9 @@
 				9B6576B41D1FC09100F5F385 /* Products */,
 				7099AF075A5CBD69DC26CF6E /* Pods */,
 				50CD4BF6A63E8BDB7C368022 /* Frameworks */,
+				9B04B9761D2E869C00C5D064 /* NuoNuo-Bridging-Header.h */,
+				9B04B9771D2E869C00C5D064 /* NuoNuoTests-Bridging-Header.h */,
+				9B04B9781D2E869C00C5D064 /* NuoNuoUITests-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				9B6576B61D1FC09100F5F385 /* AppDelegate.swift */,
+				9B04B97A1D2E882200C5D064 /* NetworkResourceDef.swift */,
 				9B6576B81D1FC09100F5F385 /* ViewController.swift */,
 				9B6576BA1D1FC09100F5F385 /* Main.storyboard */,
 				9B6576C01D1FC09100F5F385 /* Assets.xcassets */,
@@ -338,6 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B04B97B1D2E882200C5D064 /* NetworkResourceDef.swift in Sources */,
 				9B6576B91D1FC09100F5F385 /* ViewController.swift in Sources */,
 				9B6576B71D1FC09100F5F385 /* AppDelegate.swift in Sources */,
 				9B6576BF1D1FC09100F5F385 /* NuoNuo.xcdatamodeld in Sources */,
@@ -348,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B04B97C1D2E882200C5D064 /* NetworkResourceDef.swift in Sources */,
 				9B6576CF1D1FC09100F5F385 /* NuoNuoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B04B97D1D2E882200C5D064 /* NetworkResourceDef.swift in Sources */,
 				9B6576DA1D1FC09100F5F385 /* NuoNuoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,10 +499,13 @@
 			baseConfigurationReference = 56DE5627269DCCC16C4F5321 /* Pods-MyApp-NuoNuo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = NuoNuo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruby.NuoNuo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NuoNuo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -498,10 +515,12 @@
 			baseConfigurationReference = E69BAF0909BF06F86ABD8850 /* Pods-MyApp-NuoNuo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = NuoNuo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruby.NuoNuo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NuoNuo-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -510,10 +529,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = NuoNuoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruby.NuoNuoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NuoNuoTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NuoNuo.app/NuoNuo";
 			};
 			name = Debug;
@@ -522,10 +544,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = NuoNuoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruby.NuoNuoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NuoNuoTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NuoNuo.app/NuoNuo";
 			};
 			name = Release;
@@ -533,10 +557,13 @@
 		9B6576E51D1FC09100F5F385 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = NuoNuoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruby.NuoNuoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NuoNuoUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_TARGET_NAME = NuoNuo;
 			};
 			name = Debug;
@@ -544,10 +571,12 @@
 		9B6576E61D1FC09100F5F385 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = NuoNuoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruby.NuoNuoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NuoNuoUITests-Bridging-Header.h";
 				TEST_TARGET_NAME = NuoNuo;
 			};
 			name = Release;
