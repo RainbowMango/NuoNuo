@@ -16,13 +16,30 @@
                     <view key="view" contentMode="scaleToFill" id="JNs-cC-9EB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reg_bg_1" translatesAutoresizingMaskIntoConstraints="NO" id="glK-2o-bmB">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="glK-2o-bmB" firstAttribute="top" secondItem="ZQd-sm-ILh" secondAttribute="bottom" id="4qL-z0-Jtd"/>
+                            <constraint firstAttribute="trailing" secondItem="glK-2o-bmB" secondAttribute="trailing" id="9te-hI-EAe"/>
+                            <constraint firstItem="glK-2o-bmB" firstAttribute="leading" secondItem="JNs-cC-9EB" secondAttribute="leading" id="u9C-tX-OUD"/>
+                            <constraint firstItem="ATL-Za-aNb" firstAttribute="top" secondItem="glK-2o-bmB" secondAttribute="bottom" id="yrl-G5-LkG"/>
+                        </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="glK-2o-bmB" id="oKF-qi-ppN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gUI-nj-f5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="84" y="247"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="reg_bg_1" width="117" height="158"/>
+    </resources>
 </document>
