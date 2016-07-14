@@ -16,18 +16,7 @@
                     <view key="view" contentMode="scaleToFill" id="JNs-cC-9EB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reg_bg_1" translatesAutoresizingMaskIntoConstraints="NO" id="9SO-CZ-L2z">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="9SO-CZ-L2z" firstAttribute="top" secondItem="ZQd-sm-ILh" secondAttribute="bottom" id="5C1-VV-aIQ"/>
-                            <constraint firstItem="9SO-CZ-L2z" firstAttribute="trailing" secondItem="JNs-cC-9EB" secondAttribute="trailing" id="M5O-eH-spY"/>
-                            <constraint firstItem="9SO-CZ-L2z" firstAttribute="leading" secondItem="JNs-cC-9EB" secondAttribute="leading" id="TWT-GU-kF7"/>
-                            <constraint firstItem="ATL-Za-aNb" firstAttribute="top" secondItem="9SO-CZ-L2z" secondAttribute="bottom" id="j6T-ym-NGE"/>
-                        </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                 </viewController>
@@ -36,7 +25,4 @@
             <point key="canvasLocation" x="84" y="247"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="reg_bg_1" width="117" height="158"/>
-    </resources>
 </document>

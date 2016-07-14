@@ -12,7 +12,10 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupBackground()
 
+        
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +24,21 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    /**
+     添加背景图片并设置毛玻璃效果
+     */
+    func setupBackground() -> Void {
+        let backgroundView   = UIImageView(frame: view.bounds)
+        backgroundView.image = UIImage(named: "reg_bg_1")
+        view.addSubview(backgroundView)
+        
+        let blurEffect = UIBlurEffect(style: .Light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.frame
+        backgroundView.addSubview(blurEffectView)
+    }
 
+    
     /*
     // MARK: - Navigation
 
