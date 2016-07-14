@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Bmob.registerWithAppKey(BMOB_APP_KEY)
         
+        self.window!.rootViewController = LoginViewController()
+        
         return true
     }
 
