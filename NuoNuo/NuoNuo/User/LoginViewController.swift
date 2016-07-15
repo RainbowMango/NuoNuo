@@ -35,6 +35,14 @@ class LoginViewController: UIViewController {
         backgroundView.addSubview(blurEffectView)
     }
 
+    /**
+     隐藏状态栏
+     
+     - returns: bool
+     */
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
     
     /*
     // MARK: - Navigation
