@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -20,11 +21,35 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reg_bg_1" translatesAutoresizingMaskIntoConstraints="NO" id="glK-2o-bmB">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="诺诺" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VUu-Cw-XFD">
+                                <rect key="frame" x="16" y="60" width="288" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="34B-Yp-mG7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="嘘~这是一个私密的圈子" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3Y-4W-bBO">
+                                <rect key="frame" x="16" y="110" width="288" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="KCE-Dj-8bS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="glK-2o-bmB" firstAttribute="top" secondItem="ZQd-sm-ILh" secondAttribute="bottom" id="4qL-z0-Jtd"/>
                             <constraint firstAttribute="trailing" secondItem="glK-2o-bmB" secondAttribute="trailing" id="9te-hI-EAe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VUu-Cw-XFD" secondAttribute="trailing" id="DgG-DE-1Zp"/>
+                            <constraint firstItem="VUu-Cw-XFD" firstAttribute="top" secondItem="ZQd-sm-ILh" secondAttribute="bottom" constant="60" id="KlL-2n-B38"/>
+                            <constraint firstItem="i3Y-4W-bBO" firstAttribute="leading" secondItem="JNs-cC-9EB" secondAttribute="leadingMargin" id="Orh-DA-dJj"/>
+                            <constraint firstItem="VUu-Cw-XFD" firstAttribute="leading" secondItem="JNs-cC-9EB" secondAttribute="leadingMargin" id="cCC-i8-b09"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="i3Y-4W-bBO" secondAttribute="trailing" id="jtf-xg-n5a"/>
+                            <constraint firstItem="i3Y-4W-bBO" firstAttribute="top" secondItem="VUu-Cw-XFD" secondAttribute="bottom" constant="8" id="tGB-N9-Kly"/>
                             <constraint firstItem="glK-2o-bmB" firstAttribute="leading" secondItem="JNs-cC-9EB" secondAttribute="leading" id="u9C-tX-OUD"/>
                             <constraint firstItem="ATL-Za-aNb" firstAttribute="top" secondItem="glK-2o-bmB" secondAttribute="bottom" id="yrl-G5-LkG"/>
                         </constraints>
