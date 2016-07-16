@@ -44,6 +44,15 @@ class LoginViewController: UIViewController {
         return true
     }
     
+    /**
+     登录按钮点击动作
+     
+     - parameter sender: <#sender description#>
+     */
+    @IBAction func loginButtonPressed(sender: AnyObject) {
+        performSegueWithIdentifier("register_1_segue", sender: self)
+    }
+    
     /*
     // MARK: - Navigation
 
