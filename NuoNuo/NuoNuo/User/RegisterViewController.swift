@@ -1,17 +1,20 @@
 //
-//  VerifyViewController.swift
+//  RegisterViewController.swift
 //  NuoNuo
 //
-//  Created by ruby on 16/7/18.
+//  Created by ruby on 16/7/19.
 //  Copyright © 2016年 ruby. All rights reserved.
 //
 
 import UIKit
 
-class VerifyViewController: UIViewController {
+class RegisterViewController: UIViewController {
+    @IBOutlet weak var backgroundImageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupBackground()
 
         // Do any additional setup after loading the view.
     }
@@ -22,21 +25,26 @@ class VerifyViewController: UIViewController {
     }
     
     /**
+     设置背景图片毛玻璃效果
+     */
+    func setupBackground() -> Void {
+        let blurEffect = UIBlurEffect(style: .Light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = view.frame
+        backgroundImageView.addSubview(blurEffectView)
+    }
+
+    @IBAction func doneButtonPressedAction(sender: AnyObject) {
+        
+    }
+    
+    /**
      隐藏状态栏
      
      - returns: bool
      */
     override func prefersStatusBarHidden() -> Bool {
         return true
-    }
-    
-    /**
-     信息验证后继续注册流程
-     
-     - parameter sender: <#sender description#>
-     */
-    @IBAction func NextButtonPressedAction(sender: AnyObject) {
-        performSegueWithIdentifier("register_2_segue", sender: self)
     }
     
     /*

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -203,6 +204,9 @@
                                 <state key="normal" title="下一步">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="NextButtonPressedAction:" destination="MnA-7f-zdL" eventType="touchUpInside" id="Pt3-yP-ICU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -231,15 +235,90 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="e9b-nW-4hX"/>
+                    <connections>
+                        <segue destination="K3I-mm-hmp" kind="modal" identifier="register_2_segue" id="qFx-01-aIw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bLz-3s-XYX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="488" y="247"/>
         </scene>
+        <!--Register View Controller-->
+        <scene sceneID="iiG-Ez-BfN">
+            <objects>
+                <viewController id="K3I-mm-hmp" customClass="RegisterViewController" customModule="NuoNuo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ghj-x0-ZU4"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vnf-tf-Rqi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wW0-jr-y60">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reg_bg_4" translatesAutoresizingMaskIntoConstraints="NO" id="Yfo-PB-GeR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="qXv-S9-e4o">
+                                <rect key="frame" x="120" y="40" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qXv-S9-e4o" secondAttribute="height" multiplier="1:1" id="Cs5-D1-loz"/>
+                                    <constraint firstAttribute="width" constant="80" id="yLY-Q8-0N5"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请选择一个昵称" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RNZ-it-Rrd">
+                                <rect key="frame" x="56" y="160" width="208" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9UN-jx-MhP"/>
+                                </constraints>
+                                <color key="textColor" red="0.0" green="0.2901960784" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQh-JG-PRE">
+                                <rect key="frame" x="76" y="246" width="168" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.2901960784" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="A5N-Y8-hfz"/>
+                                </constraints>
+                                <state key="normal" title="完成">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButtonPressedAction:" destination="K3I-mm-hmp" eventType="touchUpInside" id="9Jy-5e-CR0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vnf-tf-Rqi" firstAttribute="top" secondItem="Yfo-PB-GeR" secondAttribute="bottom" id="4pZ-lh-Xzr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RNZ-it-Rrd" secondAttribute="trailing" constant="40" id="5OF-mn-CMw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xQh-JG-PRE" secondAttribute="trailing" constant="60" id="BKs-bp-03N"/>
+                            <constraint firstAttribute="trailing" secondItem="Yfo-PB-GeR" secondAttribute="trailing" id="h1g-hF-3Bj"/>
+                            <constraint firstItem="xQh-JG-PRE" firstAttribute="top" secondItem="RNZ-it-Rrd" secondAttribute="bottom" constant="36" id="h8z-cZ-dbW"/>
+                            <constraint firstItem="RNZ-it-Rrd" firstAttribute="top" secondItem="qXv-S9-e4o" secondAttribute="bottom" constant="40" id="hF8-DK-KCk"/>
+                            <constraint firstItem="Yfo-PB-GeR" firstAttribute="leading" secondItem="wW0-jr-y60" secondAttribute="leading" id="ihl-sC-zyf"/>
+                            <constraint firstItem="qXv-S9-e4o" firstAttribute="centerX" secondItem="wW0-jr-y60" secondAttribute="centerX" id="jf2-rq-DMh"/>
+                            <constraint firstItem="RNZ-it-Rrd" firstAttribute="leading" secondItem="wW0-jr-y60" secondAttribute="leadingMargin" constant="40" id="lzW-Op-2Mg"/>
+                            <constraint firstItem="xQh-JG-PRE" firstAttribute="leading" secondItem="wW0-jr-y60" secondAttribute="leadingMargin" constant="60" id="p5C-2E-2CW"/>
+                            <constraint firstItem="Yfo-PB-GeR" firstAttribute="top" secondItem="Ghj-x0-ZU4" secondAttribute="bottom" id="rjY-yn-b6M"/>
+                            <constraint firstItem="qXv-S9-e4o" firstAttribute="top" secondItem="Ghj-x0-ZU4" secondAttribute="bottom" constant="40" id="vfQ-aj-iT4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="Yfo-PB-GeR" id="gkQ-0S-y32"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WqB-Xe-a4n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="901" y="247"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="avatar" width="26" height="32"/>
         <image name="reg_bg_1" width="117" height="158"/>
         <image name="reg_bg_2" width="109" height="85"/>
         <image name="reg_bg_3" width="133" height="112"/>
+        <image name="reg_bg_4" width="156" height="133"/>
     </resources>
 </document>
