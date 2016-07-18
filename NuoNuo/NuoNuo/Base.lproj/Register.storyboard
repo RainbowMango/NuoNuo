@@ -133,10 +133,10 @@
             </objects>
             <point key="canvasLocation" x="84" y="247"/>
         </scene>
-        <!--View Controller-->
+        <!--Verify View Controller-->
         <scene sceneID="p3Y-e2-tOQ">
             <objects>
-                <viewController id="MnA-7f-zdL" sceneMemberID="viewController">
+                <viewController id="MnA-7f-zdL" customClass="VerifyViewController" customModule="NuoNuo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WVl-Ej-dy0"/>
                         <viewControllerLayoutGuide type="bottom" id="iq1-YB-e1v"/>

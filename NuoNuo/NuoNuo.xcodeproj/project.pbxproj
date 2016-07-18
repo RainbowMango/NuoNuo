@@ -17,6 +17,9 @@
 		9B04B9911D37C8F400C5D064 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B9901D37C8F400C5D064 /* LoginViewController.swift */; };
 		9B04B9921D37C8F400C5D064 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B9901D37C8F400C5D064 /* LoginViewController.swift */; };
 		9B04B9931D37C8F400C5D064 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B9901D37C8F400C5D064 /* LoginViewController.swift */; };
+		9B04B9951D3D2DBE00C5D064 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B9941D3D2DBE00C5D064 /* VerifyViewController.swift */; };
+		9B04B9961D3D2DBE00C5D064 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B9941D3D2DBE00C5D064 /* VerifyViewController.swift */; };
+		9B04B9971D3D2DBE00C5D064 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B9941D3D2DBE00C5D064 /* VerifyViewController.swift */; };
 		9B6576B71D1FC09100F5F385 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6576B61D1FC09100F5F385 /* AppDelegate.swift */; };
 		9B6576B91D1FC09100F5F385 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6576B81D1FC09100F5F385 /* ViewController.swift */; };
 		9B6576BC1D1FC09100F5F385 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6576BA1D1FC09100F5F385 /* Main.storyboard */; };
@@ -55,6 +58,7 @@
 		9B04B97A1D2E882200C5D064 /* NetworkResourceDef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResourceDef.swift; sourceTree = "<group>"; };
 		9B04B9831D2E933900C5D064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Register.storyboard; sourceTree = "<group>"; };
 		9B04B9901D37C8F400C5D064 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = User/LoginViewController.swift; sourceTree = "<group>"; };
+		9B04B9941D3D2DBE00C5D064 /* VerifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VerifyViewController.swift; path = User/VerifyViewController.swift; sourceTree = "<group>"; };
 		9B6576B31D1FC09100F5F385 /* NuoNuo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NuoNuo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6576B61D1FC09100F5F385 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B6576B81D1FC09100F5F385 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				9B04B9901D37C8F400C5D064 /* LoginViewController.swift */,
+				9B04B9941D3D2DBE00C5D064 /* VerifyViewController.swift */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -373,6 +378,7 @@
 				9B04B97B1D2E882200C5D064 /* NetworkResourceDef.swift in Sources */,
 				9B6576B91D1FC09100F5F385 /* ViewController.swift in Sources */,
 				9B6576B71D1FC09100F5F385 /* AppDelegate.swift in Sources */,
+				9B04B9951D3D2DBE00C5D064 /* VerifyViewController.swift in Sources */,
 				9B04B9911D37C8F400C5D064 /* LoginViewController.swift in Sources */,
 				9B6576BF1D1FC09100F5F385 /* NuoNuo.xcdatamodeld in Sources */,
 			);
@@ -383,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B04B9921D37C8F400C5D064 /* LoginViewController.swift in Sources */,
+				9B04B9961D3D2DBE00C5D064 /* VerifyViewController.swift in Sources */,
 				9B04B97C1D2E882200C5D064 /* NetworkResourceDef.swift in Sources */,
 				9B6576CF1D1FC09100F5F385 /* NuoNuoTests.swift in Sources */,
 			);
@@ -393,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B04B9931D37C8F400C5D064 /* LoginViewController.swift in Sources */,
+				9B04B9971D3D2DBE00C5D064 /* VerifyViewController.swift in Sources */,
 				9B04B97D1D2E882200C5D064 /* NetworkResourceDef.swift in Sources */,
 				9B6576DA1D1FC09100F5F385 /* NuoNuoUITests.swift in Sources */,
 			);
