@@ -19,13 +19,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Bmob.registerWithAppKey(BMOB_APP_KEY)
         
+        addNotification()
+        
         let registerSB = UIStoryboard(name: "Register", bundle: nil)
         let loginVC = registerSB.instantiateViewControllerWithIdentifier("register_sb")
         self.window!.rootViewController = loginVC
         
         return true
     }
-
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    func addNotification() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AppDelegate.registerSuccessful(_:)), name: RegisterSuccessful, object: nil)
+    }
+    
+    // MARK: - Action
+    func registerSuccessful(noti: NSNotification) {
+        //let adImage = noti.object as! UIImage
+        
+        let mainSB = UIStoryboard(name: "Main", bundle: nil)
+        let mainVC = mainSB.instantiateViewControllerWithIdentifier("main_sb")
+        
+        window?.rootViewController = mainVC
+    }
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

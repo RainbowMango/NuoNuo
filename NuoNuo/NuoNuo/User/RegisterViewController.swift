@@ -35,7 +35,7 @@ class RegisterViewController: UIViewController {
     }
 
     @IBAction func doneButtonPressedAction(sender: AnyObject) {
-        
+        NSNotificationCenter.defaultCenter().postNotificationName(RegisterSuccessful, object: nil)
     }
     
     /**
