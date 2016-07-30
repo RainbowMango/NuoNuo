@@ -19,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Bmob.registerWithAppKey(BMOB_APP_KEY)
         
+        //集成MOB
+        SMSSDK.registerApp(MOB_APP_KEY, withSecret: MOB_APP_SECRET)
+        
         addNotification()
         
         let registerSB = UIStoryboard(name: "Register", bundle: nil)
