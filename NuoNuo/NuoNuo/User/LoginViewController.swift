@@ -10,7 +10,14 @@ import UIKit
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var backgroundView: UIImageView!
+    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var verificationCodeTextField: UITextField!
 
+    @IBOutlet weak var getVerificationCodeButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
+    
+    var verifyingPhone: String = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,6 +49,31 @@ class LoginViewController: UIViewController {
      */
     override func prefersStatusBarHidden() -> Bool {
         return true
+    }
+    
+    /**
+     获取验证码button点击动作
+     
+     - parameter sender: <#sender description#>
+     */
+    @IBAction func getVerificationButtonPressed(sender: AnyObject) {
+        verifyingPhone = self.phoneTextField.text!
+        
+        if(11 != verifyingPhone.lengthOfBytesUsingEncoding(NSASCIIStringEncoding)) {
+            //TODO: 提示用户手机号位数不对
+            return
+        }
+        
+        SMSSDK.getVerificationCodeByMethod(SMSGetCodeMethodSMS, phoneNumber: verifyingPhone, zone: "86", customIdentifier: nil, result: { (error) -> Void in
+            
+            if(error != nil) {
+                //let errorString = getSMSErrorInfo(error.code)
+                //showSimpleAlert(self, title: "验证码获取失败", message: errorString)
+                return
+            }
+            
+            //showSimpleHint(self.view, title: "发送成功", message: "请耐心接收短信")
+        })
     }
     
     /**

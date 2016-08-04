@@ -73,6 +73,9 @@
                                         <state key="normal" title="获取验证码">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="getVerificationButtonPressed:" destination="vHn-bK-InB" eventType="touchUpInside" id="oZE-CK-78H"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -127,6 +130,10 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="backgroundView" destination="glK-2o-bmB" id="oKF-qi-ppN"/>
+                        <outlet property="getVerificationCodeButton" destination="YhL-Pa-eAB" id="OIp-IY-Q5l"/>
+                        <outlet property="loginButton" destination="hFW-PV-na9" id="hVQ-9g-hsn"/>
+                        <outlet property="phoneTextField" destination="EaQ-OY-9zW" id="wrQ-0C-A4L"/>
+                        <outlet property="verificationCodeTextField" destination="7nE-kc-q2p" id="3G0-0D-CeQ"/>
                         <segue destination="MnA-7f-zdL" kind="modal" identifier="register_1_segue" id="Zac-Bk-SLr"/>
                     </connections>
                 </viewController>
