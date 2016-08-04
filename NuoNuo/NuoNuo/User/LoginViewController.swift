@@ -67,7 +67,7 @@ class LoginViewController: UIViewController {
         SMSSDK.getVerificationCodeByMethod(SMSGetCodeMethodSMS, phoneNumber: verifyingPhone, zone: "86", customIdentifier: nil, result: { (error) -> Void in
             
             if(error != nil) {
-                //let errorString = getSMSErrorInfo(error.code)
+                let errorString = getSMSErrorInfo(error.code)
                 //showSimpleAlert(self, title: "验证码获取失败", message: errorString)
                 return
             }
