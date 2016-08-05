@@ -67,7 +67,7 @@ class LoginViewController: UIViewController {
         SMSSDK.getVerificationCodeByMethod(SMSGetCodeMethodSMS, phoneNumber: verifyingPhone, zone: "86", customIdentifier: nil, result: { (error) -> Void in
             
             if(error != nil) {
-                let errorString = getSMSErrorInfo(error.code)
+                //let errorString = getSMSErrorInfo(error.code)
                 //showSimpleAlert(self, title: "验证码获取失败", message: errorString)
                 return
             }
@@ -82,6 +82,21 @@ class LoginViewController: UIViewController {
      - parameter sender: <#sender description#>
      */
     @IBAction func loginButtonPressed(sender: AnyObject) {
+        
+        let verCode = verificationCodeTextField.text
+        if(verCode?.lengthOfBytesUsingEncoding(NSASCIIStringEncoding) < 0) {
+            //showSimpleAlert(self, title: VERIFY_SMS_FAILED_TITLE, message: VERIFY_SMS_FAILED_MSG)
+            return
+        }
+        
+        SMSSDK.commitVerificationCode(verCode!, phoneNumber: verifyingPhone, zone: "86") { (error) in
+            if(error != nil) {
+                //showSimpleAlert(self, title: VERIFY_SMS_FAILED_TITLE, message: VERIFY_SMS_FAILED_MSG)
+                return
+            }
+            
+            //验证通过，检查用户是否注册
+        }
         performSegueWithIdentifier("register_1_segue", sender: self)
     }
     
