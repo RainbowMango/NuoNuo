@@ -9,59 +9,24 @@
 /* Begin PBXBuildFile section */
 		0786B7CE8B6EB5284D0EE61C /* Pods_MyApp_NuoNuo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91826F5D95F36071FB51B5C3 /* Pods_MyApp_NuoNuo.framework */; };
 		9B04B97B1D2E882200C5D064 /* NetworkResourceDef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B97A1D2E882200C5D064 /* NetworkResourceDef.swift */; };
-		9B04B97C1D2E882200C5D064 /* NetworkResourceDef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B97A1D2E882200C5D064 /* NetworkResourceDef.swift */; };
-		9B04B97D1D2E882200C5D064 /* NetworkResourceDef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B97A1D2E882200C5D064 /* NetworkResourceDef.swift */; };
 		9B04B9841D2E933900C5D064 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B04B9821D2E933900C5D064 /* Register.storyboard */; };
-		9B04B9851D2E933900C5D064 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B04B9821D2E933900C5D064 /* Register.storyboard */; };
-		9B04B9861D2E933900C5D064 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B04B9821D2E933900C5D064 /* Register.storyboard */; };
 		9B04B9911D37C8F400C5D064 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B9901D37C8F400C5D064 /* LoginViewController.swift */; };
-		9B04B9921D37C8F400C5D064 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B9901D37C8F400C5D064 /* LoginViewController.swift */; };
-		9B04B9931D37C8F400C5D064 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B9901D37C8F400C5D064 /* LoginViewController.swift */; };
 		9B04B9951D3D2DBE00C5D064 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B9941D3D2DBE00C5D064 /* VerifyViewController.swift */; };
-		9B04B9961D3D2DBE00C5D064 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B9941D3D2DBE00C5D064 /* VerifyViewController.swift */; };
-		9B04B9971D3D2DBE00C5D064 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B9941D3D2DBE00C5D064 /* VerifyViewController.swift */; };
 		9B04B9991D3D348700C5D064 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B9981D3D348700C5D064 /* RegisterViewController.swift */; };
-		9B04B99A1D3D348700C5D064 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B9981D3D348700C5D064 /* RegisterViewController.swift */; };
-		9B04B99B1D3D348700C5D064 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B9981D3D348700C5D064 /* RegisterViewController.swift */; };
 		9B04B99E1D3E5D1A00C5D064 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B99D1D3E5D1A00C5D064 /* Constants.swift */; };
-		9B04B99F1D3E5D1A00C5D064 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B99D1D3E5D1A00C5D064 /* Constants.swift */; };
-		9B04B9A01D3E5D1A00C5D064 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B99D1D3E5D1A00C5D064 /* Constants.swift */; };
 		9B6576B71D1FC09100F5F385 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6576B61D1FC09100F5F385 /* AppDelegate.swift */; };
 		9B6576B91D1FC09100F5F385 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6576B81D1FC09100F5F385 /* ViewController.swift */; };
 		9B6576BC1D1FC09100F5F385 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6576BA1D1FC09100F5F385 /* Main.storyboard */; };
 		9B6576BF1D1FC09100F5F385 /* NuoNuo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B6576BD1D1FC09100F5F385 /* NuoNuo.xcdatamodeld */; };
 		9B6576C11D1FC09100F5F385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B6576C01D1FC09100F5F385 /* Assets.xcassets */; };
 		9B6576C41D1FC09100F5F385 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6576C21D1FC09100F5F385 /* LaunchScreen.storyboard */; };
-		9B6576CF1D1FC09100F5F385 /* NuoNuoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6576CE1D1FC09100F5F385 /* NuoNuoTests.swift */; };
-		9B6576DA1D1FC09100F5F385 /* NuoNuoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6576D91D1FC09100F5F385 /* NuoNuoUITests.swift */; };
-		9B6576E71D2AB37100F5F385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B6576C01D1FC09100F5F385 /* Assets.xcassets */; };
-		9B6576E81D2AB37200F5F385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B6576C01D1FC09100F5F385 /* Assets.xcassets */; };
 		9BD29FC31D5384DC00CEC9F4 /* SMSSDKErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD29FC21D5384DC00CEC9F4 /* SMSSDKErrorHandler.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		9B6576CB1D1FC09100F5F385 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9B6576AB1D1FC09100F5F385 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9B6576B21D1FC09100F5F385;
-			remoteInfo = NuoNuo;
-		};
-		9B6576D61D1FC09100F5F385 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9B6576AB1D1FC09100F5F385 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9B6576B21D1FC09100F5F385;
-			remoteInfo = NuoNuo;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		56DE5627269DCCC16C4F5321 /* Pods-MyApp-NuoNuo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp-NuoNuo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyApp-NuoNuo/Pods-MyApp-NuoNuo.debug.xcconfig"; sourceTree = "<group>"; };
 		91826F5D95F36071FB51B5C3 /* Pods_MyApp_NuoNuo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyApp_NuoNuo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B04B9761D2E869C00C5D064 /* NuoNuo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NuoNuo-Bridging-Header.h"; sourceTree = "<group>"; };
-		9B04B9771D2E869C00C5D064 /* NuoNuoTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NuoNuoTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		9B04B9781D2E869C00C5D064 /* NuoNuoUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NuoNuoUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		9B04B97A1D2E882200C5D064 /* NetworkResourceDef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResourceDef.swift; sourceTree = "<group>"; };
 		9B04B9831D2E933900C5D064 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Register.storyboard; sourceTree = "<group>"; };
 		9B04B9901D37C8F400C5D064 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = User/LoginViewController.swift; sourceTree = "<group>"; };
@@ -76,10 +41,8 @@
 		9B6576C01D1FC09100F5F385 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B6576C31D1FC09100F5F385 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B6576C51D1FC09100F5F385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9B6576CA1D1FC09100F5F385 /* NuoNuoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NuoNuoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6576CE1D1FC09100F5F385 /* NuoNuoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuoNuoTests.swift; sourceTree = "<group>"; };
 		9B6576D01D1FC09100F5F385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9B6576D51D1FC09100F5F385 /* NuoNuoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NuoNuoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6576D91D1FC09100F5F385 /* NuoNuoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuoNuoUITests.swift; sourceTree = "<group>"; };
 		9B6576DB1D1FC09100F5F385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BD29FC21D5384DC00CEC9F4 /* SMSSDKErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SMSSDKErrorHandler.swift; path = Frameworks/SMSSDK/SMSSDKErrorHandler.swift; sourceTree = "<group>"; };
@@ -92,20 +55,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0786B7CE8B6EB5284D0EE61C /* Pods_MyApp_NuoNuo.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9B6576C71D1FC09100F5F385 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9B6576D21D1FC09100F5F385 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,8 +106,6 @@
 				7099AF075A5CBD69DC26CF6E /* Pods */,
 				50CD4BF6A63E8BDB7C368022 /* Frameworks */,
 				9B04B9761D2E869C00C5D064 /* NuoNuo-Bridging-Header.h */,
-				9B04B9771D2E869C00C5D064 /* NuoNuoTests-Bridging-Header.h */,
-				9B04B9781D2E869C00C5D064 /* NuoNuoUITests-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -166,8 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				9B6576B31D1FC09100F5F385 /* NuoNuo.app */,
-				9B6576CA1D1FC09100F5F385 /* NuoNuoTests.xctest */,
-				9B6576D51D1FC09100F5F385 /* NuoNuoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -248,42 +193,6 @@
 			productReference = 9B6576B31D1FC09100F5F385 /* NuoNuo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9B6576C91D1FC09100F5F385 /* NuoNuoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9B6576E11D1FC09100F5F385 /* Build configuration list for PBXNativeTarget "NuoNuoTests" */;
-			buildPhases = (
-				9B6576C61D1FC09100F5F385 /* Sources */,
-				9B6576C71D1FC09100F5F385 /* Frameworks */,
-				9B6576C81D1FC09100F5F385 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9B6576CC1D1FC09100F5F385 /* PBXTargetDependency */,
-			);
-			name = NuoNuoTests;
-			productName = NuoNuoTests;
-			productReference = 9B6576CA1D1FC09100F5F385 /* NuoNuoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		9B6576D41D1FC09100F5F385 /* NuoNuoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9B6576E41D1FC09100F5F385 /* Build configuration list for PBXNativeTarget "NuoNuoUITests" */;
-			buildPhases = (
-				9B6576D11D1FC09100F5F385 /* Sources */,
-				9B6576D21D1FC09100F5F385 /* Frameworks */,
-				9B6576D31D1FC09100F5F385 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9B6576D71D1FC09100F5F385 /* PBXTargetDependency */,
-			);
-			name = NuoNuoUITests;
-			productName = NuoNuoUITests;
-			productReference = 9B6576D51D1FC09100F5F385 /* NuoNuoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -296,14 +205,6 @@
 				TargetAttributes = {
 					9B6576B21D1FC09100F5F385 = {
 						CreatedOnToolsVersion = 7.3.1;
-					};
-					9B6576C91D1FC09100F5F385 = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 9B6576B21D1FC09100F5F385;
-					};
-					9B6576D41D1FC09100F5F385 = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 9B6576B21D1FC09100F5F385;
 					};
 				};
 			};
@@ -321,8 +222,6 @@
 			projectRoot = "";
 			targets = (
 				9B6576B21D1FC09100F5F385 /* NuoNuo */,
-				9B6576C91D1FC09100F5F385 /* NuoNuoTests */,
-				9B6576D41D1FC09100F5F385 /* NuoNuoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -336,24 +235,6 @@
 				9B6576C11D1FC09100F5F385 /* Assets.xcassets in Resources */,
 				9B6576BC1D1FC09100F5F385 /* Main.storyboard in Resources */,
 				9B04B9841D2E933900C5D064 /* Register.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9B6576C81D1FC09100F5F385 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9B6576E71D2AB37100F5F385 /* Assets.xcassets in Resources */,
-				9B04B9851D2E933900C5D064 /* Register.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9B6576D31D1FC09100F5F385 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9B6576E81D2AB37200F5F385 /* Assets.xcassets in Resources */,
-				9B04B9861D2E933900C5D064 /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,46 +305,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9B6576C61D1FC09100F5F385 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9B04B9921D37C8F400C5D064 /* LoginViewController.swift in Sources */,
-				9B04B99A1D3D348700C5D064 /* RegisterViewController.swift in Sources */,
-				9B04B9961D3D2DBE00C5D064 /* VerifyViewController.swift in Sources */,
-				9B04B97C1D2E882200C5D064 /* NetworkResourceDef.swift in Sources */,
-				9B6576CF1D1FC09100F5F385 /* NuoNuoTests.swift in Sources */,
-				9B04B99F1D3E5D1A00C5D064 /* Constants.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9B6576D11D1FC09100F5F385 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9B04B9931D37C8F400C5D064 /* LoginViewController.swift in Sources */,
-				9B04B99B1D3D348700C5D064 /* RegisterViewController.swift in Sources */,
-				9B04B9971D3D2DBE00C5D064 /* VerifyViewController.swift in Sources */,
-				9B04B97D1D2E882200C5D064 /* NetworkResourceDef.swift in Sources */,
-				9B6576DA1D1FC09100F5F385 /* NuoNuoUITests.swift in Sources */,
-				9B04B9A01D3E5D1A00C5D064 /* Constants.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		9B6576CC1D1FC09100F5F385 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9B6576B21D1FC09100F5F385 /* NuoNuo */;
-			targetProxy = 9B6576CB1D1FC09100F5F385 /* PBXContainerItemProxy */;
-		};
-		9B6576D71D1FC09100F5F385 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9B6576B21D1FC09100F5F385 /* NuoNuo */;
-			targetProxy = 9B6576D61D1FC09100F5F385 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9B04B9821D2E933900C5D064 /* Register.storyboard */ = {
@@ -611,63 +453,6 @@
 			};
 			name = Release;
 		};
-		9B6576E21D1FC09100F5F385 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = NuoNuoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ruby.NuoNuoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "NuoNuoTests-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NuoNuo.app/NuoNuo";
-			};
-			name = Debug;
-		};
-		9B6576E31D1FC09100F5F385 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = NuoNuoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ruby.NuoNuoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "NuoNuoTests-Bridging-Header.h";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NuoNuo.app/NuoNuo";
-			};
-			name = Release;
-		};
-		9B6576E51D1FC09100F5F385 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = "";
-				INFOPLIST_FILE = NuoNuoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ruby.NuoNuoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "NuoNuoUITests-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TEST_TARGET_NAME = NuoNuo;
-			};
-			name = Debug;
-		};
-		9B6576E61D1FC09100F5F385 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = NuoNuoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ruby.NuoNuoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "NuoNuoUITests-Bridging-Header.h";
-				TEST_TARGET_NAME = NuoNuo;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -685,24 +470,6 @@
 			buildConfigurations = (
 				9B6576DF1D1FC09100F5F385 /* Debug */,
 				9B6576E01D1FC09100F5F385 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9B6576E11D1FC09100F5F385 /* Build configuration list for PBXNativeTarget "NuoNuoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9B6576E21D1FC09100F5F385 /* Debug */,
-				9B6576E31D1FC09100F5F385 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9B6576E41D1FC09100F5F385 /* Build configuration list for PBXNativeTarget "NuoNuoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9B6576E51D1FC09100F5F385 /* Debug */,
-				9B6576E61D1FC09100F5F385 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
