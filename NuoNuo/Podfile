@@ -6,15 +6,14 @@ use_frameworks!
 abstract_target 'MyApp' do
 
     target 'NuoNuo' do
-#        pod 'MWPhotoBrowser',          '~> 2.1.1'
-#        pod 'MJRefresh',               '~> 3.0.4'
+        pod 'MJRefresh',               '~> 3.0.4'
 #        pod 'MDRadialProgress',        '~> 1.3.2'
         pod 'MOBFoundation_IDFA',      '~> 2.0.8'
         pod 'SMSSDK',                  '~> 2.0.5'
 #        pod 'KMPlaceholderTextView',   '~> 1.1.2'
-#        pod 'SKPhotoBrowser',          '~> 1.7.6'
+        pod 'SKPhotoBrowser',          '~> 1.7.6'
 #        pod 'Alamofire',               '~> 3.3.0'
-#        pod 'DKImagePickerController', '~> 3.1.3'
+        pod 'DKImagePickerController', '~> 3.1.3'
         pod 'BmobSDK',                 '~> 1.7.1'
     end
 
