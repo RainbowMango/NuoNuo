@@ -10,6 +10,8 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var avataImageView: UIImageView!
+    @IBOutlet weak var nickTextField: UITextField!
 
     var verifiedPhone = String()
     var email         = String()

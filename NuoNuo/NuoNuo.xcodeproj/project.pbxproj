@@ -22,6 +22,8 @@
 		9B6576C41D1FC09100F5F385 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6576C21D1FC09100F5F385 /* LaunchScreen.storyboard */; };
 		9BD29FC31D5384DC00CEC9F4 /* SMSSDKErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD29FC21D5384DC00CEC9F4 /* SMSSDKErrorHandler.swift */; };
 		9BD29FF01D560AAD00CEC9F4 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD29FEF1D560AAD00CEC9F4 /* AlertHandler.swift */; };
+		9BD29FF21D561DBB00CEC9F4 /* HCImagePickerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD29FF11D561DBB00CEC9F4 /* HCImagePickerHandler.swift */; };
+		9BD29FF41D561DE400CEC9F4 /* DeviceLimitHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD29FF31D561DE400CEC9F4 /* DeviceLimitHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		9B6576DB1D1FC09100F5F385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BD29FC21D5384DC00CEC9F4 /* SMSSDKErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SMSSDKErrorHandler.swift; path = Frameworks/SMSSDK/SMSSDKErrorHandler.swift; sourceTree = "<group>"; };
 		9BD29FEF1D560AAD00CEC9F4 /* AlertHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertHandler.swift; path = Common/AlertHandler.swift; sourceTree = "<group>"; };
+		9BD29FF11D561DBB00CEC9F4 /* HCImagePickerHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HCImagePickerHandler.swift; path = Common/HCImagePickerHandler.swift; sourceTree = "<group>"; };
+		9BD29FF31D561DE400CEC9F4 /* DeviceLimitHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceLimitHandler.swift; path = Common/DeviceLimitHandler.swift; sourceTree = "<group>"; };
 		E69BAF0909BF06F86ABD8850 /* Pods-MyApp-NuoNuo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp-NuoNuo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyApp-NuoNuo/Pods-MyApp-NuoNuo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +97,8 @@
 		9B04B99C1D3E5CA700C5D064 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9BD29FF11D561DBB00CEC9F4 /* HCImagePickerHandler.swift */,
+				9BD29FF31D561DE400CEC9F4 /* DeviceLimitHandler.swift */,
 				9BD29FEF1D560AAD00CEC9F4 /* AlertHandler.swift */,
 				9B04B99D1D3E5D1A00C5D064 /* Constants.swift */,
 			);
@@ -304,7 +310,9 @@
 				9B04B9951D3D2DBE00C5D064 /* VerifyViewController.swift in Sources */,
 				9B04B9911D37C8F400C5D064 /* LoginViewController.swift in Sources */,
 				9B6576BF1D1FC09100F5F385 /* NuoNuo.xcdatamodeld in Sources */,
+				9BD29FF41D561DE400CEC9F4 /* DeviceLimitHandler.swift in Sources */,
 				9BD29FC31D5384DC00CEC9F4 /* SMSSDKErrorHandler.swift in Sources */,
+				9BD29FF21D561DBB00CEC9F4 /* HCImagePickerHandler.swift in Sources */,
 				9B04B99E1D3E5D1A00C5D064 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
