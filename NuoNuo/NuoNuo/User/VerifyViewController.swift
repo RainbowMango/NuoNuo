@@ -10,6 +10,11 @@ import UIKit
 
 class VerifyViewController: UIViewController {
 
+    var verifiedPhone = String()
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var staffIdentifierTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,17 +41,22 @@ class VerifyViewController: UIViewController {
      - parameter sender: <#sender description#>
      */
     @IBAction func NextButtonPressedAction(sender: AnyObject) {
+        let email = emailTextField.text!
+        let staff = staffIdentifierTextField.text!
+        
+        if(email.isEmpty || staff.isEmpty) {
+            showSimpleHint(self.view, title: "请输入身份信息", message: "请放心，不会向你的邮箱发送任何内容")
+            return
+        }
         performSegueWithIdentifier("register_2_segue", sender: self)
     }
     
-    /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let dest = segue.destinationViewController as! RegisterViewController
+        dest.verifiedPhone = verifiedPhone
+        dest.email         = emailTextField.text!
+        dest.staffID       = staffIdentifierTextField.text!
     }
-    */
-
 }

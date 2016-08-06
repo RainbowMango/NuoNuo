@@ -190,7 +190,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.0" green="0.2901960784" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入员工号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H3a-0R-VG4">
                                 <rect key="frame" x="56" y="261" width="208" height="50"/>
@@ -200,7 +200,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.0" green="0.2901960784" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RnS-bS-iVd">
                                 <rect key="frame" x="76" y="342" width="168" height="40"/>
@@ -243,6 +243,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="e9b-nW-4hX"/>
                     <connections>
+                        <outlet property="emailTextField" destination="Ln2-JK-laD" id="iDP-5V-wEU"/>
+                        <outlet property="staffIdentifierTextField" destination="H3a-0R-VG4" id="UW7-Ba-Jhb"/>
                         <segue destination="K3I-mm-hmp" kind="modal" identifier="register_2_segue" id="qFx-01-aIw"/>
                     </connections>
                 </viewController>

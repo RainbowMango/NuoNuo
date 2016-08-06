@@ -11,6 +11,10 @@ import UIKit
 class RegisterViewController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
 
+    var verifiedPhone = String()
+    var email         = String()
+    var staffID       = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
