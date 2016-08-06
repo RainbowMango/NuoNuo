@@ -21,6 +21,7 @@
 		9B6576C11D1FC09100F5F385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B6576C01D1FC09100F5F385 /* Assets.xcassets */; };
 		9B6576C41D1FC09100F5F385 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6576C21D1FC09100F5F385 /* LaunchScreen.storyboard */; };
 		9BD29FC31D5384DC00CEC9F4 /* SMSSDKErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD29FC21D5384DC00CEC9F4 /* SMSSDKErrorHandler.swift */; };
+		9BD29FF01D560AAD00CEC9F4 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD29FEF1D560AAD00CEC9F4 /* AlertHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		9B6576D91D1FC09100F5F385 /* NuoNuoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuoNuoUITests.swift; sourceTree = "<group>"; };
 		9B6576DB1D1FC09100F5F385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BD29FC21D5384DC00CEC9F4 /* SMSSDKErrorHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SMSSDKErrorHandler.swift; path = Frameworks/SMSSDK/SMSSDKErrorHandler.swift; sourceTree = "<group>"; };
+		9BD29FEF1D560AAD00CEC9F4 /* AlertHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertHandler.swift; path = Common/AlertHandler.swift; sourceTree = "<group>"; };
 		E69BAF0909BF06F86ABD8850 /* Pods-MyApp-NuoNuo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp-NuoNuo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyApp-NuoNuo/Pods-MyApp-NuoNuo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 		9B04B99C1D3E5CA700C5D064 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9BD29FEF1D560AAD00CEC9F4 /* AlertHandler.swift */,
 				9B04B99D1D3E5D1A00C5D064 /* Constants.swift */,
 			);
 			name = Common;
@@ -294,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B04B97B1D2E882200C5D064 /* NetworkResourceDef.swift in Sources */,
+				9BD29FF01D560AAD00CEC9F4 /* AlertHandler.swift in Sources */,
 				9B6576B91D1FC09100F5F385 /* ViewController.swift in Sources */,
 				9B04B9991D3D348700C5D064 /* RegisterViewController.swift in Sources */,
 				9B6576B71D1FC09100F5F385 /* AppDelegate.swift in Sources */,

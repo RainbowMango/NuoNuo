@@ -60,7 +60,7 @@ class LoginViewController: UIViewController {
         verifyingPhone = self.phoneTextField.text!
         
         if(11 != verifyingPhone.lengthOfBytesUsingEncoding(NSASCIIStringEncoding)) {
-            //TODO: 提示用户手机号位数不对
+            showSimpleHint(self.view, title: "", message: "请输入正确的手机号码")
             return
         }
         
@@ -83,13 +83,13 @@ class LoginViewController: UIViewController {
      */
     @IBAction func loginButtonPressed(sender: AnyObject) {
         
-        let verCode = verificationCodeTextField.text
-        if(verCode?.lengthOfBytesUsingEncoding(NSASCIIStringEncoding) < 0) {
-            //showSimpleAlert(self, title: VERIFY_SMS_FAILED_TITLE, message: VERIFY_SMS_FAILED_MSG)
+        let verCode = verificationCodeTextField.text!
+        if(verCode.isEmpty) {
+            showSimpleAlert(self, title: VERIFY_SMS_FAILED_TITLE, message: VERIFY_SMS_FAILED_MSG)
             return
         }
         
-        SMSSDK.commitVerificationCode(verCode!, phoneNumber: verifyingPhone, zone: "86") { (error) in
+        SMSSDK.commitVerificationCode(verCode, phoneNumber: verifyingPhone, zone: "86") { (error) in
             if(error != nil) {
                 //showSimpleAlert(self, title: VERIFY_SMS_FAILED_TITLE, message: VERIFY_SMS_FAILED_MSG)
                 return
