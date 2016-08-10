@@ -24,6 +24,7 @@
 		9BD29FF01D560AAD00CEC9F4 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD29FEF1D560AAD00CEC9F4 /* AlertHandler.swift */; };
 		9BD29FF21D561DBB00CEC9F4 /* HCImagePickerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD29FF11D561DBB00CEC9F4 /* HCImagePickerHandler.swift */; };
 		9BD29FF41D561DE400CEC9F4 /* DeviceLimitHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD29FF31D561DE400CEC9F4 /* DeviceLimitHandler.swift */; };
+		9BD29FF71D5B66F900CEC9F4 /* BombUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD29FF61D5B66F900CEC9F4 /* BombUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		9BD29FEF1D560AAD00CEC9F4 /* AlertHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertHandler.swift; path = Common/AlertHandler.swift; sourceTree = "<group>"; };
 		9BD29FF11D561DBB00CEC9F4 /* HCImagePickerHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HCImagePickerHandler.swift; path = Common/HCImagePickerHandler.swift; sourceTree = "<group>"; };
 		9BD29FF31D561DE400CEC9F4 /* DeviceLimitHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceLimitHandler.swift; path = Common/DeviceLimitHandler.swift; sourceTree = "<group>"; };
+		9BD29FF61D5B66F900CEC9F4 /* BombUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BombUtils.swift; path = Frameworks/Bmob/BombUtils.swift; sourceTree = "<group>"; };
 		E69BAF0909BF06F86ABD8850 /* Pods-MyApp-NuoNuo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp-NuoNuo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyApp-NuoNuo/Pods-MyApp-NuoNuo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,6 +168,7 @@
 		9BD29FC01D5384A800CEC9F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9BD29FF51D5B66B800CEC9F4 /* Bmob */,
 				9BD29FC11D5384C700CEC9F4 /* SMSSDK */,
 			);
 			name = Frameworks;
@@ -177,6 +180,14 @@
 				9BD29FC21D5384DC00CEC9F4 /* SMSSDKErrorHandler.swift */,
 			);
 			name = SMSSDK;
+			sourceTree = "<group>";
+		};
+		9BD29FF51D5B66B800CEC9F4 /* Bmob */ = {
+			isa = PBXGroup;
+			children = (
+				9BD29FF61D5B66F900CEC9F4 /* BombUtils.swift */,
+			);
+			name = Bmob;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +315,7 @@
 			files = (
 				9B04B97B1D2E882200C5D064 /* NetworkResourceDef.swift in Sources */,
 				9BD29FF01D560AAD00CEC9F4 /* AlertHandler.swift in Sources */,
+				9BD29FF71D5B66F900CEC9F4 /* BombUtils.swift in Sources */,
 				9B6576B91D1FC09100F5F385 /* ViewController.swift in Sources */,
 				9B04B9991D3D348700C5D064 /* RegisterViewController.swift in Sources */,
 				9B6576B71D1FC09100F5F385 /* AppDelegate.swift in Sources */,

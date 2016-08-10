@@ -54,7 +54,7 @@ class LoginViewController: UIViewController {
     /**
      获取验证码button点击动作
      
-     - parameter sender: <#sender description#>
+     - parameter sender: sender description
      */
     @IBAction func getVerificationButtonPressed(sender: AnyObject) {
         verifyingPhone = self.phoneTextField.text!
@@ -79,7 +79,7 @@ class LoginViewController: UIViewController {
     /**
      登录按钮点击动作
      
-     - parameter sender: <#sender description#>
+     - parameter sender: sender description
      */
     @IBAction func loginButtonPressed(sender: AnyObject) {
         
@@ -96,7 +96,15 @@ class LoginViewController: UIViewController {
             }
             
             //验证通过，检查用户是否注册
-            self.performSegueWithIdentifier("register_1_segue", sender: self)
+            isUserRegisted(self.verifyingPhone, result: { (registed) in
+                if(registed) {
+                    //
+                }
+                else {
+                    self.performSegueWithIdentifier("register_1_segue", sender: self)
+                }
+            })
+            
         }
         
     }
