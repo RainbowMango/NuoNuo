@@ -98,7 +98,7 @@ class LoginViewController: UIViewController {
             //验证通过，检查用户是否注册
             isUserRegisted(self.verifyingPhone, result: { (registed) in
                 if(registed) {
-                    //
+                    NSNotificationCenter.defaultCenter().postNotificationName(LoginSuccessful, object: nil)
                 }
                 else {
                     self.performSegueWithIdentifier("register_1_segue", sender: self)

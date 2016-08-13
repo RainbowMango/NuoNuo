@@ -37,16 +37,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func addNotification() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AppDelegate.registerSuccessful(_:)), name: RegisterSuccessful, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AppDelegate.loginSuccessful(_:)), name: LoginSuccessful, object: nil)
     }
     
     // MARK: - Action
-    func registerSuccessful(noti: NSNotification) {
-        //let adImage = noti.object as! UIImage
-        
+    func showMainPage() {
         let mainSB = UIStoryboard(name: "Main", bundle: nil)
         let mainVC = mainSB.instantiateViewControllerWithIdentifier("main_sb")
         
         window?.rootViewController = mainVC
+    }
+    func registerSuccessful(noti: NSNotification) {
+        showMainPage()
+    }
+    
+    func loginSuccessful(noti: NSNotification) {
+        showMainPage()
     }
     
     func applicationWillResignActive(application: UIApplication) {

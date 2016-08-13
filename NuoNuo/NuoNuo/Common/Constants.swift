@@ -10,3 +10,4 @@ import Foundation
 
 
 public let RegisterSuccessful  = "RegisterSuccessful"
+public let LoginSuccessful     = "LoginSuccessful"
