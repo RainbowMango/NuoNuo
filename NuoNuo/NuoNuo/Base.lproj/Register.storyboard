@@ -292,6 +292,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Hk-SA-2z8">
                                 <rect key="frame" x="120" y="40" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.0" green="0.2901960784" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="6OW-ND-xPl"/>
                                     <constraint firstAttribute="width" secondItem="8Hk-SA-2z8" secondAttribute="height" multiplier="1:1" id="y8E-Iy-fFx"/>

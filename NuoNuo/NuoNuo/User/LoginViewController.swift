@@ -82,10 +82,16 @@ class LoginViewController: UIViewController {
      - parameter sender: sender description
      */
     @IBAction func loginButtonPressed(sender: AnyObject) {
-        
+        //检查验证码
         let verCode = verificationCodeTextField.text!
         if(verCode.isEmpty) {
             showSimpleAlert(self, title: VERIFY_SMS_FAILED_TITLE, message: VERIFY_SMS_FAILED_MSG)
+            return
+        }
+        
+        //测试账号
+        if(phoneTextField.text! == ADMIN_PHONE && verificationCodeTextField.text! == ADMIN_CODE) {
+            self.performSegueWithIdentifier("register_1_segue", sender: self)
             return
         }
         

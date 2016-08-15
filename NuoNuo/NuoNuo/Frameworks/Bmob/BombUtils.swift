@@ -22,3 +22,18 @@ func isUserRegisted(phone: String, result: ((registed: Bool) -> Void)) -> Void {
         result(registed: !array.isEmpty)
     }
 }
+
+/**
+ 检查用户名是否已被占用
+ 
+ - parameter name:   待查询的用户名
+ - parameter result: 结果回调函数
+ */
+func isNickNameReserved(name: String, result: ((reserved: Bool) -> Void)) -> Void {
+    let bquery = BmobUser.query()
+    bquery.whereKey("username", equalTo: name)
+    
+    bquery.findObjectsInBackgroundWithBlock { (array, error) in
+        result(reserved: !array.isEmpty)
+    }
+}
