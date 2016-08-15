@@ -267,13 +267,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reg_bg_4" translatesAutoresizingMaskIntoConstraints="NO" id="Yfo-PB-GeR">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="qXv-S9-e4o">
-                                <rect key="frame" x="120" y="40" width="80" height="80"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="qXv-S9-e4o" secondAttribute="height" multiplier="1:1" id="Cs5-D1-loz"/>
-                                    <constraint firstAttribute="width" constant="80" id="yLY-Q8-0N5"/>
-                                </constraints>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请选择一个昵称" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RNZ-it-Rrd">
                                 <rect key="frame" x="56" y="160" width="208" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -297,25 +290,36 @@
                                     <action selector="doneButtonPressedAction:" destination="K3I-mm-hmp" eventType="touchUpInside" id="9Jy-5e-CR0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Hk-SA-2z8">
+                                <rect key="frame" x="120" y="40" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="6OW-ND-xPl"/>
+                                    <constraint firstAttribute="width" secondItem="8Hk-SA-2z8" secondAttribute="height" multiplier="1:1" id="y8E-Iy-fFx"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="avatar"/>
+                                <connections>
+                                    <action selector="avatarButtonPressedAction:" destination="K3I-mm-hmp" eventType="touchUpInside" id="oCs-OX-M2h"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Vnf-tf-Rqi" firstAttribute="top" secondItem="Yfo-PB-GeR" secondAttribute="bottom" id="4pZ-lh-Xzr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RNZ-it-Rrd" secondAttribute="trailing" constant="40" id="5OF-mn-CMw"/>
+                            <constraint firstItem="8Hk-SA-2z8" firstAttribute="centerX" secondItem="wW0-jr-y60" secondAttribute="centerX" id="5lb-yG-XY5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xQh-JG-PRE" secondAttribute="trailing" constant="60" id="BKs-bp-03N"/>
+                            <constraint firstItem="8Hk-SA-2z8" firstAttribute="top" secondItem="Ghj-x0-ZU4" secondAttribute="bottom" constant="40" id="XGw-lY-I7m"/>
                             <constraint firstAttribute="trailing" secondItem="Yfo-PB-GeR" secondAttribute="trailing" id="h1g-hF-3Bj"/>
                             <constraint firstItem="xQh-JG-PRE" firstAttribute="top" secondItem="RNZ-it-Rrd" secondAttribute="bottom" constant="36" id="h8z-cZ-dbW"/>
-                            <constraint firstItem="RNZ-it-Rrd" firstAttribute="top" secondItem="qXv-S9-e4o" secondAttribute="bottom" constant="40" id="hF8-DK-KCk"/>
                             <constraint firstItem="Yfo-PB-GeR" firstAttribute="leading" secondItem="wW0-jr-y60" secondAttribute="leading" id="ihl-sC-zyf"/>
-                            <constraint firstItem="qXv-S9-e4o" firstAttribute="centerX" secondItem="wW0-jr-y60" secondAttribute="centerX" id="jf2-rq-DMh"/>
                             <constraint firstItem="RNZ-it-Rrd" firstAttribute="leading" secondItem="wW0-jr-y60" secondAttribute="leadingMargin" constant="40" id="lzW-Op-2Mg"/>
+                            <constraint firstItem="RNZ-it-Rrd" firstAttribute="top" secondItem="8Hk-SA-2z8" secondAttribute="bottom" constant="40" id="m1C-ji-wFG"/>
                             <constraint firstItem="xQh-JG-PRE" firstAttribute="leading" secondItem="wW0-jr-y60" secondAttribute="leadingMargin" constant="60" id="p5C-2E-2CW"/>
                             <constraint firstItem="Yfo-PB-GeR" firstAttribute="top" secondItem="Ghj-x0-ZU4" secondAttribute="bottom" id="rjY-yn-b6M"/>
-                            <constraint firstItem="qXv-S9-e4o" firstAttribute="top" secondItem="Ghj-x0-ZU4" secondAttribute="bottom" constant="40" id="vfQ-aj-iT4"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="avataImageView" destination="qXv-S9-e4o" id="GEN-Bi-cXd"/>
+                        <outlet property="avatarButton" destination="8Hk-SA-2z8" id="VTB-tK-XdC"/>
                         <outlet property="backgroundImageView" destination="Yfo-PB-GeR" id="gkQ-0S-y32"/>
                         <outlet property="nickTextField" destination="RNZ-it-Rrd" id="PBn-Yg-Gnw"/>
                     </connections>

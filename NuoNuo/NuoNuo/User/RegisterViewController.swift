@@ -10,7 +10,7 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
-    @IBOutlet weak var avataImageView: UIImageView!
+    @IBOutlet weak var avatarButton: UIButton!
     @IBOutlet weak var nickTextField: UITextField!
 
     var verifiedPhone = String()
@@ -40,6 +40,10 @@ class RegisterViewController: UIViewController {
         backgroundImageView.addSubview(blurEffectView)
     }
 
+    @IBAction func avatarButtonPressedAction(sender: AnyObject) {
+        print("选取头像")
+    }
+    
     @IBAction func doneButtonPressedAction(sender: AnyObject) {
         NSNotificationCenter.defaultCenter().postNotificationName(RegisterSuccessful, object: nil)
     }
