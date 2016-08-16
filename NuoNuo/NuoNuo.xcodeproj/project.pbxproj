@@ -25,6 +25,7 @@
 		9BD29FF21D561DBB00CEC9F4 /* HCImagePickerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD29FF11D561DBB00CEC9F4 /* HCImagePickerHandler.swift */; };
 		9BD29FF41D561DE400CEC9F4 /* DeviceLimitHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD29FF31D561DE400CEC9F4 /* DeviceLimitHandler.swift */; };
 		9BD29FF71D5B66F900CEC9F4 /* BombUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD29FF61D5B66F900CEC9F4 /* BombUtils.swift */; };
+		9BD29FF91D634BB100CEC9F4 /* ImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD29FF81D634BB100CEC9F4 /* ImageHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		9BD29FF11D561DBB00CEC9F4 /* HCImagePickerHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HCImagePickerHandler.swift; path = Common/HCImagePickerHandler.swift; sourceTree = "<group>"; };
 		9BD29FF31D561DE400CEC9F4 /* DeviceLimitHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceLimitHandler.swift; path = Common/DeviceLimitHandler.swift; sourceTree = "<group>"; };
 		9BD29FF61D5B66F900CEC9F4 /* BombUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BombUtils.swift; path = Frameworks/Bmob/BombUtils.swift; sourceTree = "<group>"; };
+		9BD29FF81D634BB100CEC9F4 /* ImageHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageHandler.swift; path = Common/ImageHandler.swift; sourceTree = "<group>"; };
 		E69BAF0909BF06F86ABD8850 /* Pods-MyApp-NuoNuo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp-NuoNuo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyApp-NuoNuo/Pods-MyApp-NuoNuo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 		9B04B99C1D3E5CA700C5D064 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9BD29FF81D634BB100CEC9F4 /* ImageHandler.swift */,
 				9BD29FF11D561DBB00CEC9F4 /* HCImagePickerHandler.swift */,
 				9BD29FF31D561DE400CEC9F4 /* DeviceLimitHandler.swift */,
 				9BD29FEF1D560AAD00CEC9F4 /* AlertHandler.swift */,
@@ -323,6 +326,7 @@
 				9B04B9911D37C8F400C5D064 /* LoginViewController.swift in Sources */,
 				9B6576BF1D1FC09100F5F385 /* NuoNuo.xcdatamodeld in Sources */,
 				9BD29FF41D561DE400CEC9F4 /* DeviceLimitHandler.swift in Sources */,
+				9BD29FF91D634BB100CEC9F4 /* ImageHandler.swift in Sources */,
 				9BD29FC31D5384DC00CEC9F4 /* SMSSDKErrorHandler.swift in Sources */,
 				9BD29FF21D561DBB00CEC9F4 /* HCImagePickerHandler.swift in Sources */,
 				9B04B99E1D3E5D1A00C5D064 /* Constants.swift in Sources */,

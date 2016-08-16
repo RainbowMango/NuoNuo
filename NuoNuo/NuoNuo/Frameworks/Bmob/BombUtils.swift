@@ -37,3 +37,21 @@ func isNickNameReserved(name: String, result: ((reserved: Bool) -> Void)) -> Voi
         result(reserved: !array.isEmpty)
     }
 }
+
+func uploadAvatar(image: UIImage, phone: String, result: ((url: String) -> Void)) -> Void {
+    let imageData = ImageHandler().getImageBinary(image, compressionQuality: 1.0)
+    if(imageData.data == nil) {
+        return
+    }
+    let imageName = phone + "." + imageData.mine!
+    
+    //let obj = BmobObject(className: "_User")
+    let bombFile = BmobFile(fileName: imageName, withFileData: imageData.data)
+    
+    bombFile.saveInBackground { (successful, error) in
+        if(successful) {
+            print("上传成功： \(bombFile.url)")
+            result(url: bombFile.url)
+        }
+    }
+}

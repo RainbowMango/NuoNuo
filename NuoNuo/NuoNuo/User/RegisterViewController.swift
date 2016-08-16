@@ -89,8 +89,11 @@ class RegisterViewController: UIViewController {
                 showSimpleHint(self.view, title: "重名了", message: "该名称已被使用")
                 return
             }
+            self.verifiedPhone = "18605811857"// 测试使用
+            uploadAvatar(self.avatarImage!, phone: self.verifiedPhone, result: { (url) in
+                NSNotificationCenter.defaultCenter().postNotificationName(RegisterSuccessful, object: nil)
+            })
             
-            NSNotificationCenter.defaultCenter().postNotificationName(RegisterSuccessful, object: nil)
         }
     }
     
