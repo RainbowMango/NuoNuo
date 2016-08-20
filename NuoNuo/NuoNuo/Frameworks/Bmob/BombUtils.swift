@@ -93,8 +93,47 @@ func bombAddAvatar(image: UIImage, phone: String, result: ((url: String) -> Void
     }
 }
 
-func bombUpdateAvatar() -> Void {
+func bombUpdateAvatar(image: UIImage, phone: String, result: ((url: String) -> Void)) -> Void {
+    let imageData = ImageHandler().getImageBinary(image, compressionQuality: 1.0)
+    if(imageData.data == nil) {
+        print("bombAddAvatar: 转换图片失败")
+        return
+    }
+    let imageName = phone + "." + imageData.mine!
     
+    let bombFile = BmobFile(fileName: imageName, withFileData: imageData.data)
+    
+    bombFile.saveInBackground { (successful, error) in
+        if(successful) {
+            let bquery = BmobQuery(className: BOMB_USER_AVATAR_TABLE)
+            bquery.whereKey(BOMB_USER_AVATAR_COLUMN_KEY, equalTo: phone)
+            
+            bquery.findObjectsInBackgroundWithBlock({ (objectArray, searchError) in
+                if(objectArray.isEmpty) {
+                    print("bombUpdateAvatar: No such object find.")
+                    result(url: String())
+                    return
+                }
+                if(objectArray.count > 1) {
+                    print("bombUpdateAvatar: More than one object to be updated.")
+                    result(url: String())
+                    return
+                }
+                
+                let targetObject = objectArray.first
+                targetObject?.setObject(bombFile.url, forKey: BOMB_USER_AVATAR_COLUMN_URL)
+                targetObject?.updateInBackgroundWithResultBlock({ (uSuccess, uError) in
+                    if(uError != nil) {
+                        print("bombUpdateAvatar: Update failed: \(uError.localizedDescription).")
+                        result(url: String())
+                        return
+                    }
+                    
+                    result(url: bombFile.url)
+                })
+            })
+        }
+    }
 }
 
 func uploadAvatar(image: UIImage, phone: String, result: ((url: String) -> Void)) -> Void {
@@ -106,8 +145,10 @@ func uploadAvatar(image: UIImage, phone: String, result: ((url: String) -> Void)
         }
         
         //更新用户头像
+        bombUpdateAvatar(image, phone: phone, result: result)
         
         //删除用户原头像文件
+        //TODO
     }
     
 }

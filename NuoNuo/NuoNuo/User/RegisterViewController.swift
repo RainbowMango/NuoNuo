@@ -91,6 +91,10 @@ class RegisterViewController: UIViewController {
             }
             self.verifiedPhone = "18605811857"// 测试使用
             uploadAvatar(self.avatarImage!, phone: self.verifiedPhone, result: { (url) in
+                
+                //上传头像成功，插入用户数据
+                //TODO
+                
                 NSNotificationCenter.defaultCenter().postNotificationName(RegisterSuccessful, object: nil)
             })
             
