@@ -14,6 +14,12 @@ let BOMB_USER_AVATAR_COLUMN_KEY = "mobilePhoneNumber"
 let BOMB_USER_AVATAR_COLUMN_URL = "avatarURL"
 
 
+/// 用户表
+let BMOB_USER_TABLE_COLUMN_EMPLOYEEID = "employeeID"
+let BMOB_USER_TABLE_COLUMN_PHONE      = "mobilePhoneNumberVer"
+let BMOB_USER_TABLE_COLUMN_AVATAR     = "avatar"
+
+
 /**
  检查手机号是否已经注册
  
@@ -26,6 +32,27 @@ func isUserRegisted(phone: String, result: ((registed: Bool) -> Void)) -> Void {
     
     bquery.findObjectsInBackgroundWithBlock { (array, error) in
         result(registed: !array.isEmpty)
+    }
+}
+
+func userSignUp(phone: String, email: String, staffID: String, avatar: String, username: String, result: ((success: Bool, error: NSError?) -> Void)) -> Void {
+    let user = BmobUser()
+    
+    user.username = username
+    user.password = phone
+    user.email    = email
+    user.mobilePhoneNumber = phone
+    user.setObject(staffID, forKey: BMOB_USER_TABLE_COLUMN_EMPLOYEEID)
+    user.setObject(phone, forKey: BMOB_USER_TABLE_COLUMN_PHONE)
+    user.setObject(avatar, forKey: BMOB_USER_TABLE_COLUMN_AVATAR)
+    user.signUpInBackgroundWithBlock { (signResult, signError) in
+        if(!signResult) {
+            print("userSignUp: failed: \(signError.localizedDescription)")
+            result(success: signResult, error: signError)
+            return
+        }
+        
+        result(success: signResult, error: nil)
     }
 }
 
@@ -151,4 +178,52 @@ func uploadAvatar(image: UIImage, phone: String, result: ((url: String) -> Void)
         //TODO
     }
     
+}
+
+func getAvatarPath(phone: String, callback: ((path: String, error: NSError) -> Void)) ->Void {
+    let bquery = BmobQuery(className: BOMB_USER_AVATAR_TABLE)
+    bquery.whereKey(BOMB_USER_AVATAR_COLUMN_KEY, equalTo: phone)
+    
+    bquery.findObjectsInBackgroundWithBlock { (array, error) in
+        if(array.isEmpty) {
+            callback(path: String(), error: error)
+            return
+        }
+        let object = array[0] as! BmobObject
+        let path   = object.objectForKey(BOMB_USER_AVATAR_COLUMN_URL) as! String
+        callback(path: path, error: error)
+    }
+}
+
+func removeAvatar(phone: String, result: ((success: Bool, error: NSError) -> Void)) -> Void {
+    getAvatarPath(phone) { (path, avatarError) in
+        if(path.isEmpty) {
+            print("removeAvatar: remove failed: \(avatarError.localizedDescription)")
+            result(success: false, error: avatarError)
+            return
+        }
+        let bombFile = BmobFile(filePath: path)
+        bombFile.deleteInBackground({ (deleteSuccess, deleteError) in
+            if(!deleteSuccess) {
+                print("removeAvatar: delete faile: \(deleteError.localizedDescription)")
+                result(success: true, error: deleteError)
+                return
+            }
+        })
+    }
+}
+
+/**
+ 删除服务器存储文件
+ 
+ - parameter path:           文件URL
+ - parameter resultCallback: 删除结果回调
+ */
+func removeFileByPath(path: String, resultCallback: ((sucess: Bool, error: NSError) -> Void)?) -> Void {
+    let bmobFile = BmobFile(filePath: path)
+    bmobFile.deleteInBackground { (deleteSuccess, deleteError) in
+        if(resultCallback != nil) {
+            resultCallback!(sucess: deleteSuccess, error: deleteError)
+        }
+    }
 }

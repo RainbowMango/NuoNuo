@@ -93,9 +93,17 @@ class RegisterViewController: UIViewController {
             uploadAvatar(self.avatarImage!, phone: self.verifiedPhone, result: { (url) in
                 
                 //上传头像成功，插入用户数据
-                //TODO
-                
-                NSNotificationCenter.defaultCenter().postNotificationName(RegisterSuccessful, object: nil)
+                userSignUp(self.verifiedPhone, email: self.email, staffID: self.staffID, avatar: url, username: self.nickName, result: { (success, error) in
+                    if(!success) {
+                        //删除图片
+                        removeFileByPath(url, resultCallback: nil)
+                        
+                        showSimpleHint(self.view, title: "注册失败", message: error!.localizedDescription)
+                        return
+                    }
+                    
+                    NSNotificationCenter.defaultCenter().postNotificationName(RegisterSuccessful, object: nil)
+                })
             })
             
         }
