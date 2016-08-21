@@ -15,9 +15,9 @@ let BOMB_USER_AVATAR_COLUMN_URL = "avatarURL"
 
 
 /// 用户表
-let BMOB_USER_TABLE_COLUMN_EMPLOYEEID = "employeeID"
-let BMOB_USER_TABLE_COLUMN_PHONE      = "mobilePhoneNumberVer"
-let BMOB_USER_TABLE_COLUMN_AVATAR     = "avatar"
+let BMOB_USER_TABLE_COLUMN_EMPLOYEEID     = "employeeID"
+let BMOB_USER_TABLE_COLUMN_PHONE_VERIFIED = "mobilePhoneNumberVerified"
+let BMOB_USER_TABLE_COLUMN_AVATAR         = "avatar"
 
 
 /**
@@ -43,7 +43,7 @@ func userSignUp(phone: String, email: String, staffID: String, avatar: String, u
     user.email    = email
     user.mobilePhoneNumber = phone
     user.setObject(staffID, forKey: BMOB_USER_TABLE_COLUMN_EMPLOYEEID)
-    user.setObject(phone, forKey: BMOB_USER_TABLE_COLUMN_PHONE)
+    user.setObject(true, forKey: BMOB_USER_TABLE_COLUMN_PHONE_VERIFIED)
     user.setObject(avatar, forKey: BMOB_USER_TABLE_COLUMN_AVATAR)
     user.signUpInBackgroundWithBlock { (signResult, signError) in
         if(!signResult) {
