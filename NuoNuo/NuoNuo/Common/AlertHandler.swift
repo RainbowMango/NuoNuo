@@ -37,3 +37,25 @@ func showSimpleHint(targetView: UIView, title: String, message: String) {
     hud.detailsLabel.text = message
     hud.hideAnimated(true, afterDelay: 1)
 }
+
+/**
+ 向view中添加提示框，并返回提示框句柄
+ 
+ - parameter targetView: 添加提示框的view
+ 
+ - returns: 提示框句柄
+ */
+func showHintFromView(targetView: UIView) -> MBProgressHUD? {
+    return MBProgressHUD.showHUDAddedTo(targetView, animated: true)
+}
+
+/**
+ 从view中删除提示框
+ 
+ - parameter targetView: 将要删除提示框的view
+ 
+ - returns: 删除成功返回true, 删除失败返回false
+ */
+func hideHintFromView(targetView: UIView) -> Bool {
+    return MBProgressHUD.hideHUDForView(targetView, animated: true)
+}

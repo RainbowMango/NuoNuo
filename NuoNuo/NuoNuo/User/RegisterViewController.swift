@@ -28,8 +28,6 @@ class RegisterViewController: UIViewController {
         setupBackground()
         
         setupImageBlock()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -84,9 +82,12 @@ class RegisterViewController: UIViewController {
             return
         }
         
+        showHintFromView(self.view)
+        
         isNickNameReserved(nickName) { (reserved) in
             if(reserved) {
                 showSimpleHint(self.view, title: "重名了", message: "该名称已被使用")
+                hideHintFromView(self.view)
                 return
             }
             self.verifiedPhone = "18605811857"// 测试使用
@@ -97,10 +98,13 @@ class RegisterViewController: UIViewController {
                     if(!success) {
                         //删除图片
                         removeFileByPath(url, resultCallback: nil)
+                        hideHintFromView(self.view)
                         
                         showSimpleHint(self.view, title: "注册失败", message: error!.localizedDescription)
                         return
                     }
+                    
+                    hideHintFromView(self.view)
                     
                     NSNotificationCenter.defaultCenter().postNotificationName(RegisterSuccessful, object: nil)
                 })
@@ -118,14 +122,6 @@ class RegisterViewController: UIViewController {
         return true
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
