@@ -57,6 +57,31 @@ func userSignUp(phone: String, email: String, staffID: String, avatar: String, u
 }
 
 /**
+ 缓存用户信息到本地，方便下次登录使用
+ 该方法根据参数向服务器端请求完整的用户信息，然后缓存到本地。获取用户信息使用：BmobUser.currentUser()。
+ 
+ - parameter username: 用户昵称
+ - parameter password: 用户密码，本初使用手机号
+ */
+func cacheUserinfo(username: String, password: String) {
+    BmobUser.loginWithUsernameInBackground(username, password: password)
+}
+
+/**
+ 判断本地是否有缓存用户信息。
+ 
+ - returns: true(有) fasle(没有)
+ */
+func isUserLogined() -> Bool {
+    let user = BmobUser.currentUser()
+    if(user != nil) {
+        return true
+    }
+    
+    return false
+}
+
+/**
  检查用户名是否已被占用
  
  - parameter name:   待查询的用户名
@@ -164,15 +189,17 @@ func bombUpdateAvatar(image: UIImage, phone: String, result: ((url: String) -> V
 }
 
 func uploadAvatar(image: UIImage, phone: String, result: ((url: String) -> Void)) -> Void {
+    let smallImage = ImageHandler().aspectSacleSize(image, targetSize: CGSizeMake(120, 120))
     
     isAvatarExist(phone) { (exist) in
         if(!exist) {
             //新用户首次添加头像
-            bombAddAvatar(image, phone: phone, result: result)
+            bombAddAvatar(smallImage, phone: phone, result: result)
+            return
         }
         
         //更新用户头像
-        bombUpdateAvatar(image, phone: phone, result: result)
+        bombUpdateAvatar(smallImage, phone: phone, result: result)
         
         //删除用户原头像文件
         //TODO

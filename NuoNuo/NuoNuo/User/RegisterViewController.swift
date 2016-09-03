@@ -81,6 +81,7 @@ class RegisterViewController: UIViewController {
             showSimpleHint(self.view, title: "缺少昵称", message: "请给自己选一个名字吧~")
             return
         }
+        nickTextField.resignFirstResponder() // 收起键盘
         
         showHintFromView(self.view)
         
@@ -90,7 +91,7 @@ class RegisterViewController: UIViewController {
                 hideHintFromView(self.view)
                 return
             }
-            self.verifiedPhone = "18605811857"// 测试使用
+            
             uploadAvatar(self.avatarImage!, phone: self.verifiedPhone, result: { (url) in
                 
                 //上传头像成功，插入用户数据
@@ -105,6 +106,9 @@ class RegisterViewController: UIViewController {
                     }
                     
                     hideHintFromView(self.view)
+                    
+                    //记录登录状态
+                    cacheUserinfo(self.nickName, password: self.verifiedPhone)
                     
                     NSNotificationCenter.defaultCenter().postNotificationName(RegisterSuccessful, object: nil)
                 })

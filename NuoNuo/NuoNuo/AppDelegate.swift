@@ -24,9 +24,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         addNotification()
         
-        let registerSB = UIStoryboard(name: "Register", bundle: nil)
-        let loginVC = registerSB.instantiateViewControllerWithIdentifier("register_sb")
-        self.window!.rootViewController = loginVC
+        //如果用户没有登录，则跳转到登录界面
+        if (!isUserLogined()) {
+            let registerSB = UIStoryboard(name: "Register", bundle: nil)
+            let loginVC = registerSB.instantiateViewControllerWithIdentifier("register_sb")
+            self.window!.rootViewController = loginVC
+        }
         
         return true
     }
