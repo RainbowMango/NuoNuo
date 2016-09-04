@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--我的圈子-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NuoNuo" customModuleProvider="target" sceneMemberID="viewController">
@@ -174,7 +174,13 @@
                             <constraint firstItem="RlL-Vs-8Vk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="pSD-u6-YlS"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="sDl-Tx-WHr"/>
+                    <navigationItem key="navigationItem" title="我的圈子" id="sDl-Tx-WHr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="OL6-Ie-huo">
+                            <connections>
+                                <segue destination="O9t-9G-yzo" kind="push" id="p6R-Vj-NzK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="commentsTableView" destination="RlL-Vs-8Vk" id="keq-gw-3pi"/>
                     </connections>
@@ -182,6 +188,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1045" y="-373"/>
+        </scene>
+        <!--Post View Controller-->
+        <scene sceneID="fUL-7A-Qu6">
+            <objects>
+                <viewController id="O9t-9G-yzo" customClass="PostViewController" customModule="NuoNuo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JdZ-Gq-GYk"/>
+                        <viewControllerLayoutGuide type="bottom" id="SW4-FZ-JnG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1eZ-nv-9dK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C91-rj-aeE">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="C91-rj-aeE" firstAttribute="leading" secondItem="1eZ-nv-9dK" secondAttribute="leading" id="fqg-o6-Ctn"/>
+                            <constraint firstItem="C91-rj-aeE" firstAttribute="top" secondItem="JdZ-Gq-GYk" secondAttribute="bottom" id="hld-0D-EyW"/>
+                            <constraint firstItem="SW4-FZ-JnG" firstAttribute="top" secondItem="C91-rj-aeE" secondAttribute="bottom" id="thD-P1-V7D"/>
+                            <constraint firstAttribute="trailing" secondItem="C91-rj-aeE" secondAttribute="trailing" id="w9i-X2-WjH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zGD-d2-OE2">
+                        <barButtonItem key="rightBarButtonItem" title="发表" id="RSG-rO-RAs"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ow-j6-pi5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1413" y="-373"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="KA9-BB-EmR">

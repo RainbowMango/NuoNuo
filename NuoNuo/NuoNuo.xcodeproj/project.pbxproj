@@ -14,6 +14,7 @@
 		9B04B9951D3D2DBE00C5D064 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B9941D3D2DBE00C5D064 /* VerifyViewController.swift */; };
 		9B04B9991D3D348700C5D064 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B9981D3D348700C5D064 /* RegisterViewController.swift */; };
 		9B04B99E1D3E5D1A00C5D064 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B99D1D3E5D1A00C5D064 /* Constants.swift */; };
+		9B2A034E1D7C5F2B0091BDF1 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2A034D1D7C5F2B0091BDF1 /* PostViewController.swift */; };
 		9B6576B71D1FC09100F5F385 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6576B61D1FC09100F5F385 /* AppDelegate.swift */; };
 		9B6576B91D1FC09100F5F385 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6576B81D1FC09100F5F385 /* ViewController.swift */; };
 		9B6576BC1D1FC09100F5F385 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6576BA1D1FC09100F5F385 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 		9B04B9941D3D2DBE00C5D064 /* VerifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VerifyViewController.swift; path = User/VerifyViewController.swift; sourceTree = "<group>"; };
 		9B04B9981D3D348700C5D064 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = User/RegisterViewController.swift; sourceTree = "<group>"; };
 		9B04B99D1D3E5D1A00C5D064 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Common/Constants.swift; sourceTree = "<group>"; };
+		9B2A034D1D7C5F2B0091BDF1 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		9B6576B31D1FC09100F5F385 /* NuoNuo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NuoNuo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6576B61D1FC09100F5F385 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B6576B81D1FC09100F5F385 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				9B04B97A1D2E882200C5D064 /* NetworkResourceDef.swift */,
 				9B6576B81D1FC09100F5F385 /* ViewController.swift */,
 				9B6576BA1D1FC09100F5F385 /* Main.storyboard */,
+				9B2A034D1D7C5F2B0091BDF1 /* PostViewController.swift */,
 				9B6576C01D1FC09100F5F385 /* Assets.xcassets */,
 				9B6576C21D1FC09100F5F385 /* LaunchScreen.storyboard */,
 				9B6576C51D1FC09100F5F385 /* Info.plist */,
@@ -325,6 +328,7 @@
 				9B04B9951D3D2DBE00C5D064 /* VerifyViewController.swift in Sources */,
 				9B04B9911D37C8F400C5D064 /* LoginViewController.swift in Sources */,
 				9B6576BF1D1FC09100F5F385 /* NuoNuo.xcdatamodeld in Sources */,
+				9B2A034E1D7C5F2B0091BDF1 /* PostViewController.swift in Sources */,
 				9BD29FF41D561DE400CEC9F4 /* DeviceLimitHandler.swift in Sources */,
 				9BD29FF91D634BB100CEC9F4 /* ImageHandler.swift in Sources */,
 				9BD29FC31D5384DC00CEC9F4 /* SMSSDKErrorHandler.swift in Sources */,
