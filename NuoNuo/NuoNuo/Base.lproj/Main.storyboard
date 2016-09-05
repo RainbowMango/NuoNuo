@@ -189,10 +189,10 @@
             </objects>
             <point key="canvasLocation" x="1045" y="-373"/>
         </scene>
-        <!--Post View Controller-->
+        <!--发表-->
         <scene sceneID="fUL-7A-Qu6">
             <objects>
-                <viewController id="O9t-9G-yzo" customClass="PostViewController" customModule="NuoNuo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="O9t-9G-yzo" userLabel="发表" customClass="PostViewController" customModule="NuoNuo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JdZ-Gq-GYk"/>
                         <viewControllerLayoutGuide type="bottom" id="SW4-FZ-JnG"/>
@@ -265,8 +265,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zGD-d2-OE2">
-                        <barButtonItem key="rightBarButtonItem" title="发表" id="RSG-rO-RAs"/>
+                        <barButtonItem key="rightBarButtonItem" title="发表" id="RSG-rO-RAs">
+                            <connections>
+                                <action selector="PostButtonPressed:" destination="O9t-9G-yzo" id="DvZ-3o-6Ku"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="contentTextView" destination="3OH-qG-LkL" id="Kxs-sJ-8yN"/>
+                        <outlet property="postButton" destination="RSG-rO-RAs" id="8Rz-RP-wcS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ow-j6-pi5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
