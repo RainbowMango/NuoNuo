@@ -17,9 +17,22 @@ let POST_TABLE_COLUMN_PIC     = "pic"
 let POST_TABLE_COLUMN_VOTE    = "vote"
 let POST_TABLE_COLUMN_NVOTE   = "nvote"
 let POST_TABLE_COLUMN_FORWARD = "forward"
+let POST_TABLE_COLUMN_CREATE  = "createdAt"
+let POST_TABLE_COLUMN_UPDATE  = "updatedAt"
 
 //其他宏定义
 let POST_TABLE_PIC_MAX_SIZE   = CGSizeMake(120, 120)
+
+class Post {
+    var author : String?
+    var id     : String?
+    var content: String?
+    var pic    : String?
+    var vote   : Int?
+    var nvote  : Int?
+    var forward: Int?
+    var create : String?
+}
 
 /**
  发表帖子(带图片)
@@ -64,4 +77,40 @@ func addPost(author: String, content: String, pic: UIImage?, result: (successful
     else { //不带图片的帖子
         saveImageSuccessCallback(String())
     }
+}
+
+/**
+ 根据时间新旧程度获取帖子信息
+ 
+ - parameter sIndex: 开始行数
+ - parameter num:    计划获取行数
+ 
+ - returns: 结果数组
+ */
+func getPostByTime(sIndex: Int, num: Int) -> [Post] {
+    var posts = Array<Post>()
+    
+    let query = BmobQuery(className: POST_TABLE_NAME)
+    query.orderByDescending(POST_TABLE_COLUMN_UPDATE)
+    query.skip = sIndex
+    query.limit = num
+    
+    query.findObjectsInBackgroundWithBlock { (array, error) in
+        if(nil != error) {
+            print("查询帖子失败")
+            return
+        }
+        
+        for item in array {
+            let post = Post()
+            post.id      = item.objectForKey(POST_TABLE_COLUMN_ID)      as? String
+            post.author  = item.objectForKey(POST_TABLE_COLUMN_AUTHOR)  as? String
+            post.content = item.objectForKey(POST_TABLE_COLUMN_CONTENT) as? String
+            post.pic     = item.objectForKey(POST_TABLE_COLUMN_PIC)     as? String
+            post.create  = item.objectForKey(POST_TABLE_COLUMN_CREATE)  as? String
+            posts.append(post)
+        }
+    }
+    
+    return posts
 }

@@ -18,6 +18,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         commentsTableView.tableFooterView = UIView()
         commentsTableView.estimatedRowHeight = 160 //预估高度要大于SB中最小高度，否则cell可能被压缩
         commentsTableView.rowHeight = UITableViewAutomaticDimension // cell 高度自适应
+        
+        getPostByTime(0, num: 10)
     }
 
     override func didReceiveMemoryWarning() {
