@@ -120,13 +120,14 @@ class PostViewController: UIViewController, UITextViewDelegate {
         print("获取作者信息: \(author)")
         
         showHintFromView(self.view)
-        addPost(author! + ".png", content: self.contentTextView.text, pic: photo) { (successfull) in
+        addPost(author!, content: self.contentTextView.text, pic: photo) { (successfull) in
             hideHintFromView(self.view)
             if(!successfull) {
                 print("发布帖子失败!")
             }
             else {
                 print("发布帖子成功.")
+                self.navigationController?.popViewControllerAnimated(true)
             }
         }
     }

@@ -10,6 +10,7 @@ import Foundation
 
 //帖子表信息
 let POST_TABLE_NAME           = "post"
+let POST_TABLE_COLUMN_ID      = "id"
 let POST_TABLE_COLUMN_AUTHOR  = "author"
 let POST_TABLE_COLUMN_CONTENT = "content"
 let POST_TABLE_COLUMN_PIC     = "pic"
@@ -21,7 +22,7 @@ let POST_TABLE_COLUMN_FORWARD = "forward"
 let POST_TABLE_PIC_MAX_SIZE   = CGSizeMake(120, 120)
 
 /**
- 发表帖子
+ 发表帖子(带图片)
  
  - parameter author:  帖子作者
  - parameter content: 帖子文本内容
@@ -29,14 +30,17 @@ let POST_TABLE_PIC_MAX_SIZE   = CGSizeMake(120, 120)
  */
 func addPost(author: String, content: String, pic: UIImage?, result: (successfull: Bool) -> Void){
     
+    let uniqueId = getCurrTime() //帖子唯一ID, 也用于存储图片文件名
+    
     let saveImageSuccessCallback = { (url: String) -> Void in
         let obj = BmobObject(className: POST_TABLE_NAME)
-        obj.setObject(author, forKey: POST_TABLE_COLUMN_AUTHOR)
-        obj.setObject(content, forKey: POST_TABLE_COLUMN_CONTENT)
-        obj.setObject(url, forKey: POST_TABLE_COLUMN_PIC)
-        obj.setObject(0, forKey: POST_TABLE_COLUMN_VOTE)
-        obj.setObject(0, forKey: POST_TABLE_COLUMN_NVOTE)
-        obj.setObject(0, forKey: POST_TABLE_COLUMN_FORWARD)
+        obj.setObject(uniqueId, forKey: POST_TABLE_COLUMN_ID)
+        obj.setObject(author,   forKey: POST_TABLE_COLUMN_AUTHOR)
+        obj.setObject(content,  forKey: POST_TABLE_COLUMN_CONTENT)
+        obj.setObject(url,      forKey: POST_TABLE_COLUMN_PIC)
+        obj.setObject(0,        forKey: POST_TABLE_COLUMN_VOTE)
+        obj.setObject(0,        forKey: POST_TABLE_COLUMN_NVOTE)
+        obj.setObject(0,        forKey: POST_TABLE_COLUMN_FORWARD)
         obj.saveInBackgroundWithResultBlock({ (success, error) in
             if(success) {
                 result(successfull: true)
@@ -55,7 +59,7 @@ func addPost(author: String, content: String, pic: UIImage?, result: (successful
     var smallImage: UIImage?
     if(nil != pic) { //带图片的帖子
         smallImage = ImageHandler().aspectSacleSize(pic!, targetSize: POST_TABLE_PIC_MAX_SIZE)
-        addImageToRemote(author, image: smallImage, successCallback: saveImageSuccessCallback, failureCallback: postFaulureCallback)
+        addImageToRemote(uniqueId, image: smallImage, successCallback: saveImageSuccessCallback, failureCallback: postFaulureCallback)
     }
     else { //不带图片的帖子
         saveImageSuccessCallback(String())

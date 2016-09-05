@@ -43,7 +43,7 @@ func addFileWithData(fileName: String?, fileData: NSData?, successCallback: ((ur
 /**
  添加图片到服务器
  
- - parameter fileName:        图片名称
+ - parameter fileName:        图片名称,不带后缀
  - parameter image:           图片
  - parameter successCallback: 保存成功回调函数
  - parameter failureCallback: 保存失败回调函数
@@ -54,11 +54,12 @@ func addImageToRemote(fileName: String?, image: UIImage?, successCallback: ((url
         return
     }
     
-    let imageData = ImageHandler().getImageBinary(image!, compressionQuality: 1.0).data
-    if(imageData == nil) {
+    let imageData = ImageHandler().getImageBinary(image!, compressionQuality: 1.0)
+    if(imageData.data == nil) {
         print("转换图片失败!")
         return
     }
     
-    addFileWithData(fileName, fileData: imageData, successCallback: successCallback, failureCallback: failureCallback)
+    let fileNameWithSuffix = fileName! + "." + imageData.mine!
+    addFileWithData(fileNameWithSuffix, fileData: imageData.data, successCallback: successCallback, failureCallback: failureCallback)
 }

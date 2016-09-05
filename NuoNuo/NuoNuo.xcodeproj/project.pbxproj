@@ -17,6 +17,7 @@
 		9B2A034E1D7C5F2B0091BDF1 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2A034D1D7C5F2B0091BDF1 /* PostViewController.swift */; };
 		9B42F14E1D7D78D100F5807A /* BmobPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B42F14D1D7D78D100F5807A /* BmobPost.swift */; };
 		9B42F1501D7D7B3200F5807A /* BmobFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B42F14F1D7D7B3200F5807A /* BmobFile.swift */; };
+		9B42F1521D7DA70800F5807A /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B42F1511D7DA70800F5807A /* CommonUtils.swift */; };
 		9B6576B71D1FC09100F5F385 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6576B61D1FC09100F5F385 /* AppDelegate.swift */; };
 		9B6576B91D1FC09100F5F385 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6576B81D1FC09100F5F385 /* ViewController.swift */; };
 		9B6576BC1D1FC09100F5F385 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6576BA1D1FC09100F5F385 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		9B2A034D1D7C5F2B0091BDF1 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		9B42F14D1D7D78D100F5807A /* BmobPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BmobPost.swift; path = Frameworks/Bmob/BmobPost.swift; sourceTree = "<group>"; };
 		9B42F14F1D7D7B3200F5807A /* BmobFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BmobFile.swift; path = Frameworks/Bmob/BmobFile.swift; sourceTree = "<group>"; };
+		9B42F1511D7DA70800F5807A /* CommonUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommonUtils.swift; path = Common/CommonUtils.swift; sourceTree = "<group>"; };
 		9B6576B31D1FC09100F5F385 /* NuoNuo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NuoNuo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6576B61D1FC09100F5F385 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B6576B81D1FC09100F5F385 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				9BD29FF31D561DE400CEC9F4 /* DeviceLimitHandler.swift */,
 				9BD29FEF1D560AAD00CEC9F4 /* AlertHandler.swift */,
 				9B04B99D1D3E5D1A00C5D064 /* Constants.swift */,
+				9B42F1511D7DA70800F5807A /* CommonUtils.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				9BD29FC31D5384DC00CEC9F4 /* SMSSDKErrorHandler.swift in Sources */,
 				9BD29FF21D561DBB00CEC9F4 /* HCImagePickerHandler.swift in Sources */,
 				9B04B99E1D3E5D1A00C5D064 /* Constants.swift in Sources */,
+				9B42F1521D7DA70800F5807A /* CommonUtils.swift in Sources */,
 				9B42F14E1D7D78D100F5807A /* BmobPost.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
