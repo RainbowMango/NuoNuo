@@ -203,6 +203,57 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C91-rj-aeE">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3OH-qG-LkL" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="raG-xl-jjC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="分享身边新鲜事"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ppG-iV-VX1">
+                                        <rect key="frame" x="0.0" y="145" width="320" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="SIx-4l-kj5"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gxu-rY-JHP">
+                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Spt-BD-aI2">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="3OH-qG-LkL" firstAttribute="top" secondItem="C91-rj-aeE" secondAttribute="top" id="5vG-vi-Gzo"/>
+                                    <constraint firstItem="ppG-iV-VX1" firstAttribute="leading" secondItem="C91-rj-aeE" secondAttribute="leading" id="APQ-u5-qlO"/>
+                                    <constraint firstAttribute="bottom" secondItem="ppG-iV-VX1" secondAttribute="bottom" constant="157" id="GHD-RK-VUC"/>
+                                    <constraint firstAttribute="trailing" secondItem="3OH-qG-LkL" secondAttribute="trailing" id="NCX-0w-EeQ"/>
+                                    <constraint firstItem="3OH-qG-LkL" firstAttribute="leading" secondItem="C91-rj-aeE" secondAttribute="leading" id="RHQ-wl-GFr"/>
+                                    <constraint firstItem="ppG-iV-VX1" firstAttribute="top" secondItem="3OH-qG-LkL" secondAttribute="bottom" constant="17" id="YNa-7P-egj"/>
+                                    <constraint firstAttribute="trailing" secondItem="ppG-iV-VX1" secondAttribute="trailing" id="u45-cB-YjW"/>
+                                    <constraint firstItem="3OH-qG-LkL" firstAttribute="width" secondItem="C91-rj-aeE" secondAttribute="width" id="uhH-SL-ffG"/>
+                                    <constraint firstItem="ppG-iV-VX1" firstAttribute="width" secondItem="3OH-qG-LkL" secondAttribute="width" id="wae-bm-v98"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -219,7 +270,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Ow-j6-pi5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1413" y="-373"/>
+            <point key="canvasLocation" x="1490" y="-373"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="KA9-BB-EmR">
