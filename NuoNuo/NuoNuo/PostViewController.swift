@@ -115,6 +115,20 @@ class PostViewController: UIViewController, UITextViewDelegate {
      */
     @IBAction func PostButtonPressed(sender: AnyObject) {
         print("准备将内容发布到服务器...")
+        
+        let author = getUserPhone()
+        print("获取作者信息: \(author)")
+        
+        showHintFromView(self.view)
+        addPost(author! + ".png", content: self.contentTextView.text, pic: photo) { (successfull) in
+            hideHintFromView(self.view)
+            if(!successfull) {
+                print("发布帖子失败!")
+            }
+            else {
+                print("发布帖子成功.")
+            }
+        }
     }
     
 }

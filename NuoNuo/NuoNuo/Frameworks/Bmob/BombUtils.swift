@@ -82,6 +82,21 @@ func isUserLogined() -> Bool {
 }
 
 /**
+ 获取用户手机号码
+ 
+ - returns: 返回用户手机号码
+ */
+func getUserPhone() -> String? {
+    let user = BmobUser.currentUser()
+    
+    if(nil != user) {
+        return user.mobilePhoneNumber
+    }
+    
+    return nil
+}
+
+/**
  检查用户名是否已被占用
  
  - parameter name:   待查询的用户名

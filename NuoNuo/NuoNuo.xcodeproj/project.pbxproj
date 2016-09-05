@@ -15,6 +15,8 @@
 		9B04B9991D3D348700C5D064 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B9981D3D348700C5D064 /* RegisterViewController.swift */; };
 		9B04B99E1D3E5D1A00C5D064 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04B99D1D3E5D1A00C5D064 /* Constants.swift */; };
 		9B2A034E1D7C5F2B0091BDF1 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2A034D1D7C5F2B0091BDF1 /* PostViewController.swift */; };
+		9B42F14E1D7D78D100F5807A /* BmobPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B42F14D1D7D78D100F5807A /* BmobPost.swift */; };
+		9B42F1501D7D7B3200F5807A /* BmobFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B42F14F1D7D7B3200F5807A /* BmobFile.swift */; };
 		9B6576B71D1FC09100F5F385 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6576B61D1FC09100F5F385 /* AppDelegate.swift */; };
 		9B6576B91D1FC09100F5F385 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6576B81D1FC09100F5F385 /* ViewController.swift */; };
 		9B6576BC1D1FC09100F5F385 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B6576BA1D1FC09100F5F385 /* Main.storyboard */; };
@@ -40,6 +42,8 @@
 		9B04B9981D3D348700C5D064 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = User/RegisterViewController.swift; sourceTree = "<group>"; };
 		9B04B99D1D3E5D1A00C5D064 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Common/Constants.swift; sourceTree = "<group>"; };
 		9B2A034D1D7C5F2B0091BDF1 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		9B42F14D1D7D78D100F5807A /* BmobPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BmobPost.swift; path = Frameworks/Bmob/BmobPost.swift; sourceTree = "<group>"; };
+		9B42F14F1D7D7B3200F5807A /* BmobFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BmobFile.swift; path = Frameworks/Bmob/BmobFile.swift; sourceTree = "<group>"; };
 		9B6576B31D1FC09100F5F385 /* NuoNuo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NuoNuo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6576B61D1FC09100F5F385 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B6576B81D1FC09100F5F385 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				9BD29FF61D5B66F900CEC9F4 /* BombUtils.swift */,
+				9B42F14D1D7D78D100F5807A /* BmobPost.swift */,
+				9B42F14F1D7D7B3200F5807A /* BmobFile.swift */,
 			);
 			name = Bmob;
 			sourceTree = "<group>";
@@ -321,6 +327,7 @@
 			files = (
 				9B04B97B1D2E882200C5D064 /* NetworkResourceDef.swift in Sources */,
 				9BD29FF01D560AAD00CEC9F4 /* AlertHandler.swift in Sources */,
+				9B42F1501D7D7B3200F5807A /* BmobFile.swift in Sources */,
 				9BD29FF71D5B66F900CEC9F4 /* BombUtils.swift in Sources */,
 				9B6576B91D1FC09100F5F385 /* ViewController.swift in Sources */,
 				9B04B9991D3D348700C5D064 /* RegisterViewController.swift in Sources */,
@@ -334,6 +341,7 @@
 				9BD29FC31D5384DC00CEC9F4 /* SMSSDKErrorHandler.swift in Sources */,
 				9BD29FF21D561DBB00CEC9F4 /* HCImagePickerHandler.swift in Sources */,
 				9B04B99E1D3E5D1A00C5D064 /* Constants.swift in Sources */,
+				9B42F14E1D7D78D100F5807A /* BmobPost.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
