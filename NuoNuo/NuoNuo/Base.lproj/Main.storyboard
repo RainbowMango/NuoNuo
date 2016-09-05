@@ -219,40 +219,26 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textView>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ppG-iV-VX1">
-                                        <rect key="frame" x="0.0" y="145" width="320" height="100"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" placeholderIntrinsicWidth="100" placeholderIntrinsicHeight="100" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9OB-Fr-t0Z">
+                                        <rect key="frame" x="110" y="168" width="100" height="100"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="SIx-4l-kj5"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="300" id="Tk7-xa-c7C"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="qh4-Km-70s"/>
                                         </constraints>
-                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gxu-rY-JHP">
-                                            <size key="itemSize" width="50" height="50"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Spt-BD-aI2">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </view>
-                                            </collectionViewCell>
-                                        </cells>
-                                    </collectionView>
+                                        <state key="normal" title="添加图片"/>
+                                        <connections>
+                                            <action selector="addPhontoButtonPressed:" destination="O9t-9G-yzo" eventType="touchUpInside" id="mBk-3a-Hil"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="3OH-qG-LkL" firstAttribute="top" secondItem="C91-rj-aeE" secondAttribute="top" id="5vG-vi-Gzo"/>
-                                    <constraint firstItem="ppG-iV-VX1" firstAttribute="leading" secondItem="C91-rj-aeE" secondAttribute="leading" id="APQ-u5-qlO"/>
-                                    <constraint firstAttribute="bottom" secondItem="ppG-iV-VX1" secondAttribute="bottom" constant="157" id="GHD-RK-VUC"/>
+                                    <constraint firstAttribute="bottom" secondItem="9OB-Fr-t0Z" secondAttribute="bottom" constant="257" id="JHI-Zg-VYK"/>
+                                    <constraint firstItem="9OB-Fr-t0Z" firstAttribute="centerX" secondItem="C91-rj-aeE" secondAttribute="centerX" id="MT6-Sl-Psh"/>
                                     <constraint firstAttribute="trailing" secondItem="3OH-qG-LkL" secondAttribute="trailing" id="NCX-0w-EeQ"/>
                                     <constraint firstItem="3OH-qG-LkL" firstAttribute="leading" secondItem="C91-rj-aeE" secondAttribute="leading" id="RHQ-wl-GFr"/>
-                                    <constraint firstItem="ppG-iV-VX1" firstAttribute="top" secondItem="3OH-qG-LkL" secondAttribute="bottom" constant="17" id="YNa-7P-egj"/>
-                                    <constraint firstAttribute="trailing" secondItem="ppG-iV-VX1" secondAttribute="trailing" id="u45-cB-YjW"/>
+                                    <constraint firstItem="9OB-Fr-t0Z" firstAttribute="top" secondItem="3OH-qG-LkL" secondAttribute="bottom" constant="40" id="Uhn-sO-KdK"/>
                                     <constraint firstItem="3OH-qG-LkL" firstAttribute="width" secondItem="C91-rj-aeE" secondAttribute="width" id="uhH-SL-ffG"/>
-                                    <constraint firstItem="ppG-iV-VX1" firstAttribute="width" secondItem="3OH-qG-LkL" secondAttribute="width" id="wae-bm-v98"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -272,6 +258,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addPhontoButton" destination="9OB-Fr-t0Z" id="4G3-ya-Dzq"/>
                         <outlet property="contentTextView" destination="3OH-qG-LkL" id="Kxs-sJ-8yN"/>
                         <outlet property="postButton" destination="RSG-rO-RAs" id="8Rz-RP-wcS"/>
                     </connections>

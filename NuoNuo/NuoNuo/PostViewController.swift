@@ -8,6 +8,7 @@
 
 import UIKit
 import KMPlaceholderTextView
+import DKImagePickerController
 
 let POST_MIN_LEN = 0
 let POST_MAX_LEN = 256
@@ -16,6 +17,15 @@ class PostViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var postButton: UIBarButtonItem!
     @IBOutlet weak var contentTextView: KMPlaceholderTextView!
+    @IBOutlet weak var addPhontoButton: UIButton!
+    
+    private var didSelectImageBlock: ((assets: [DKAsset]) -> Void)?  //image picker回调
+    var photo: UIImage? {
+        didSet {
+            addPhontoButton.setBackgroundImage(photo, forState: .Normal)
+            addPhontoButton.setTitle("点击更改图片", forState: .Normal)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +33,8 @@ class PostViewController: UIViewController, UITextViewDelegate {
         self.tabBarController?.tabBar.hidden = true
         postButton.enabled = false
         contentTextView.delegate = self
+        
+        setupImageBlock()
 
         // Do any additional setup after loading the view.
     }
@@ -34,6 +46,28 @@ class PostViewController: UIViewController, UITextViewDelegate {
     
     override func viewWillDisappear(animated: Bool) {
         self.tabBarController?.tabBar.hidden = false
+    }
+    
+    func setupImageBlock() {
+        didSelectImageBlock = { (assets: [DKAsset]) in
+            print("获取到图片张数: \(assets.count), 准备处理...")
+            if assets.isEmpty || assets.count > 1 {
+                print("获取图片张数不符合要求!")
+                return
+            }
+            
+            for asset in assets { //实际只需要一张图片
+                asset.fetchFullScreenImage(false, completeBlock: { (image, info) in
+                    if nil == image {
+                        showSimpleAlert(self, title: "您真幸运", message: "获取图片失败了")
+                        return
+                    }
+                    self.photo = image
+                    return
+                })
+                
+            }
+        }
     }
 
     //MARK: --UITextViewDelegate
@@ -66,6 +100,12 @@ class PostViewController: UIViewController, UITextViewDelegate {
             return false;
         }
         return true;
+    }
+    
+    @IBAction func addPhontoButtonPressed(sender: AnyObject) {
+        print("用户准备选择图片...")
+        let alertVC = HCImagePickerHandler().makeAlertController(self, maxCount: 1, defaultAssets: nil, didSelectAssets: self.didSelectImageBlock)
+        self.presentViewController(alertVC, animated: true, completion: nil)
     }
     
     /**
