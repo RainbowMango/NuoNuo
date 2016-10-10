@@ -21,7 +21,7 @@ xcuserdata/
 *.moved-aside
 *.xcuserstate
 .DS_Store
-NetworkResourceDef.swift
+#NetworkResourceDef.swift
 
 ## Obj-C/Swift specific
 *.hmap
